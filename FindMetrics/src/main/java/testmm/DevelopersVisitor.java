@@ -1,5 +1,7 @@
 package testmm;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,61 +12,59 @@ import org.repodriller.domain.Developer;
 import org.repodriller.domain.Modification;
 import org.repodriller.persistence.PersistenceMechanism;
 import org.repodriller.scm.CommitVisitor;
+import org.repodriller.scm.RepositoryFile;
 import org.repodriller.scm.SCMRepository;
 
 public class DevelopersVisitor implements CommitVisitor {
 	
-	public Developer authorName;
-	public Map<String,Map<String,Integer>> mapedDataAdd;
-	
+	public String authorName;
+	public List<Integer> mapedDataAdd;
+	int contador;
 
 	
 	public DevelopersVisitor() {
-		this.mapedDataAdd = new HashMap<String,Map<String,Integer>>();
+		this.mapedDataAdd = new ArrayList<Integer>();
 	}
 	
 	
-
 	@Override
 	public void process(SCMRepository repo, Commit commit, PersistenceMechanism writer) {
-		// TODO Auto-generated method stub
-		
-		authorName = commit.getAuthor();
-		Map<String,Integer> mappedData = new HashMap<String,Integer>();
-		String mensagem = commit.getMsg();
-		
-		for(Modification z : commit.getModifications())
-		{
+		try {
+			repo.getScm().checkout(commit.getHash());
+			List<RepositoryFile> files = repo.getScm().files();
+
+			int totalLoc = 0;
 			
-			
-			List<String> path =new ArrayList<>(); 
-			String[] e = z.getNewPath().split("/");
-			
-			if(z.fileNameEndsWith("java"))
-			{
-				for (String string : e) {
-					path.add(string);
-				}
-				if(!path.contains("test")&&(path.size()>1)&&(!(z.getFileName().charAt(0) =='.')))
+			for(RepositoryFile file : files) {
+				
+				if((!file.fileNameEndsWith("java"))||(!file.fileNameContains("test"))) continue;
+				else
 				{
-					mappedData.put(z.getFileName(), z.getAdded());
-					System.err.println("==============");
-					System.err.println(z.getFileName() + " == "+z.getAdded());
-					System.err.println("==============");
-					
+					File soFile = file.getFile();
+					int loc = Utils.countLineNumbers(Utils.readFile(soFile));
+					totalLoc += loc;
 				}
+				
+				
+				
 			}
 			
+			writer.write(
+				repo.getPath(),
+				totalLoc
+			);
 			
+		} finally {
+			repo.getScm().reset();
 		}
-		mapedDataAdd.put(mensagem, mappedData);
 
 	}
+
 
 	@Override
 	public String name() {
-		// TODO Auto-generated method stub
-		return "developers";
+		return "loc-per-commit";
 	}
+
 
 }
