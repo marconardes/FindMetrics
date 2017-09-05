@@ -117,11 +117,27 @@ public class Graf extends ApplicationFrame {
         plot.setDomainGridlinePaint(Color.white);
         plot.setRangeGridlinePaint(Color.white);
         
-        final XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
-        renderer.setSeriesShapesVisible(0, false);
-        renderer.setSeriesShapesVisible(1, false);
+        final XYLineAndShapeRenderer render = new XYLineAndShapeRenderer();
+        render.setSeriesShapesVisible(0, true);
+        render.setSeriesPaint(0, Color.RED);
+        render.setSeriesShapesVisible(1, true);
 
-        plot.setRenderer(renderer);
+        render.setSeriesPaint(1, Color.BLUE);
+        render.setSeriesShapesVisible(2, true);
+        render.setSeriesPaint(2, Color.RED);
+        render.setSeriesShapesVisible(3, true);
+        render.setSeriesPaint(3, Color.BLUE);
+        render.setSeriesShapesVisible(4, true);
+        render.setSeriesPaint(4, Color.BLUE);
+        render.setSeriesShapesVisible(5, false);
+        render.setSeriesShapesVisible(6, false);
+        render.setSeriesShapesVisible(7, false);
+        render.setSeriesShapesVisible(8, false);
+        
+        
+        System.out.println(plot.toString());
+        
+        plot.setRenderer(render);
 
         final NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
         rangeAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
@@ -138,9 +154,9 @@ public class Graf extends ApplicationFrame {
      */
     public static void main(final String[] args) {
 
-    	RepodrillerMinner h= new RepodrillerMinner();
-    	 BasicConfigurator.configure();
-    	new RepoDriller().start(h);
+    	//RepodrillerMinner h= new RepodrillerMinner();
+    	//BasicConfigurator.configure();
+    	//new RepoDriller().start(h);
 		
 		CsvReader reader = new CsvReader();
 		reader.read("devs.csv");

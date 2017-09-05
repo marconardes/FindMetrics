@@ -41,12 +41,12 @@ public class CsvReader {
             	if(repoProcess.containsKey(varLine[0]))
             	{
             		value = repoProcess.get(varLine[0]);
-            		value.add(Integer.parseInt(varLine[1]));
+            		value.add(Integer.parseInt(varLine[2]));
             		repoProcess.replace(varLine[0], value);
             	}
             	else
             	{
-            		value.add(Integer.parseInt(varLine[1]));
+            		value.add(Integer.parseInt(varLine[2]));
             		repoProcess.put(varLine[0], value);
             		
             	}

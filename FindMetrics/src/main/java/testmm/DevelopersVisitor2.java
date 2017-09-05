@@ -19,7 +19,7 @@ public class DevelopersVisitor2 implements CommitVisitor{
 	public void process(SCMRepository repo, Commit commit, PersistenceMechanism writer) {
 		// TODO Auto-generated method stub
 		try {
-				int c = 0;
+				int codeLine = 0;
 				System.out.println(repo.getPath());
 				
 				repo.getScm().checkout(commit.getHash());
@@ -30,28 +30,22 @@ public class DevelopersVisitor2 implements CommitVisitor{
 					System.out.println("");
 					if(result.isError()) continue;
 					if(!result.getFile().contains("test")) {
-					writer.write(
-						commit.getHash(),
-						commit.getAuthor(),
-						result.getFile() ,
-						result.getClassName(),
-						result.getType(),
-						result.getCbo() ,
-						result.getWmc() ,
-						result.getDit() ,
-						result.getNoc() ,
-						result.getRfc() ,
-						result.getLcom() ,
-						result.getNom() ,
-						result.getNopm() ,
-						result.getNosm() ,
-						result.getNof() ,
-						result.getNopf() ,
-						result.getNosf() ,
-						result.getNosi() ,
-						result.getLoc()
-					);}
+						codeLine+= result.getLoc();
+								
+								
+						
+					}
 				}
+				
+				if(codeLine>0) {
+					writer.write(
+							repo.getPath(),
+							commit.getMsg(),
+							codeLine
+						);
+				}
+				
+				
 		} finally {
 			repo.getScm().reset();
 		}

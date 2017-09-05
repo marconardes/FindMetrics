@@ -31,7 +31,7 @@ public class TestHello {
 		System.out.println("END");
 	}
 	
-	//@Test
+	@Test
 	public void grafTest()
 	{
 		RepodrillerMinner h= new RepodrillerMinner();
