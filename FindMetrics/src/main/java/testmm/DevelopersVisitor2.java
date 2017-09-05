@@ -20,6 +20,7 @@ public class DevelopersVisitor2 implements CommitVisitor{
 		// TODO Auto-generated method stub
 		try {
 				int codeLine = 0;
+				int wmc = 0;
 				System.out.println(repo.getPath());
 				
 				repo.getScm().checkout(commit.getHash());
@@ -32,7 +33,7 @@ public class DevelopersVisitor2 implements CommitVisitor{
 					if(!result.getFile().contains("test")) {
 						codeLine+= result.getLoc();
 								
-								
+						wmc+=result.getWmc();
 						
 					}
 				}
@@ -41,7 +42,8 @@ public class DevelopersVisitor2 implements CommitVisitor{
 					writer.write(
 							repo.getPath(),
 							commit.getMsg(),
-							codeLine
+							//codeLine,
+							wmc
 						);
 				}
 				

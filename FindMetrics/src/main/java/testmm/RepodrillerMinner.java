@@ -34,9 +34,9 @@ public class RepodrillerMinner implements Study {
 		new RepositoryMining()
 		.in(GitRepository.singleProject("/home/home/git/Piloto_Nardes"))
 		.in(GitRepository.singleProject("/home/home/git/Piloto_Guerra"))
-		.in(GitRepository.singleProject("/home/home/git/exp1groupAsub2"))
-		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub1"))
-		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub2"))
+		//.in(GitRepository.singleProject("/home/home/git/exp1groupAsub2"))
+		//.in(GitRepository.singleProject("/home/home/git/exp1groupBsub1"))
+		//.in(GitRepository.singleProject("/home/home/git/exp1groupBsub2"))
 		.through(Commits.all())
 		.process(dv2,new CSVFile("devs.csv"))
 		.mine();
