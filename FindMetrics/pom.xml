@@ -17,6 +17,13 @@
 			<artifactId>jfreechart</artifactId>
 			<version>1.0.19</version>
 		</dependency>
+		
+		<dependency>
+		  <groupId>com.github.mauricioaniche</groupId>
+		  <artifactId>ck</artifactId>
+		  <version>0.2.1-SNAPSHOT</version>
+		</dependency>
+		
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -25,6 +32,12 @@
 				<artifactId>guava</artifactId>
 				<version>22.0</version>
 			</dependency>
+			<dependency>
+			<groupId>org.eclipse.jdt</groupId>
+			<artifactId>org.eclipse.jdt.core</artifactId>
+			<version>3.12.3</version>
+		</dependency>
+			
 		</dependencies>
 	</dependencyManagement>
 </project>

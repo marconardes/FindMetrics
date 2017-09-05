@@ -21,7 +21,7 @@ public class TestHello {
 		System.out.println("END");
 			      
 	}
-	@Test
+	//@Test
 	public void testCSV()
 	{
 		CsvReader reader = new CsvReader();
@@ -31,7 +31,7 @@ public class TestHello {
 		System.out.println("END");
 	}
 	
-	@Test
+	//@Test
 	public void grafTest()
 	{
 		RepodrillerMinner h= new RepodrillerMinner();

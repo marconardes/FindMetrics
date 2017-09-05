@@ -14,14 +14,16 @@ import org.repodriller.persistence.csv.CSVFile;
 import org.repodriller.scm.GitRepository;
 
 public class RepodrillerMinner implements Study {
-	private DevelopersVisitor dv;
+	private DevelopersVisitor2 dv2;
 	
 	List<Integer> value = new ArrayList<>();
 	Integer sum = 0;
 
 	public RepodrillerMinner()
 	{
-		 dv = new DevelopersVisitor();
+		 //dv = new DevelopersVisitor();
+		dv2 = new DevelopersVisitor2();
+
 
 	}
 
@@ -30,14 +32,14 @@ public class RepodrillerMinner implements Study {
 	public void execute() {
 		// TODO Auto-generated method stub
 		new RepositoryMining()
-		.in(GitRepository.singleProject("/home/home/git/Piloto_Nardes"))
+		.in(GitRepository.singleProject("/home/home/git/Piloto_Nardes", true))
 		.in(GitRepository.singleProject("/home/home/git/Piloto_Guerra"))
-		.in(GitRepository.singleProject("/home/home/git/exp1groupAsub2"))
-		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub1"))
-		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub2"))
-		.filters(new OnlyModificationsWithFileTypes(Arrays.asList(".java")))
+		//.in(GitRepository.singleProject("/home/home/git/exp1groupAsub2"))
+		//.in(GitRepository.singleProject("/home/home/git/exp1groupBsub1"))
+		//.in(GitRepository.singleProject("/home/home/git/exp1groupBsub2"))
+		//.filters(new OnlyModificationsWithFileTypes(Arrays.asList(".java")))
 		.through(Commits.all())
-		.process(dv,new CSVFile("devs.csv"))
+		.process(dv2,new CSVFile("devs.csv"))
 		.mine();
 		
 	}
