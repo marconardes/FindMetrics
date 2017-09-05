@@ -135,7 +135,6 @@ public class Graf extends ApplicationFrame {
         render.setSeriesShapesVisible(8, false);
         
         
-        System.out.println(plot.toString());
         
         plot.setRenderer(render);
 
