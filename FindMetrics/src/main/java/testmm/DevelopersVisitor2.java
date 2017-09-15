@@ -28,7 +28,6 @@ public class DevelopersVisitor2 implements CommitVisitor{
 				CKReport report = new CK().calculate(repo.getPath());
 				
 				for(CKNumber result : report.all()) {
-					System.out.println("");
 					if(result.isError()) continue;
 					if(!result.getFile().contains("test")) {
 						codeLine+= result.getLoc();
@@ -42,7 +41,7 @@ public class DevelopersVisitor2 implements CommitVisitor{
 					writer.write(
 							repo.getPath(),
 							commit.getMsg(),
-							//codeLine,
+							codeLine,
 							wmc
 						);
 				}

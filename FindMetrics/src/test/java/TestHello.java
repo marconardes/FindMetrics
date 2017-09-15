@@ -1,5 +1,8 @@
 import static org.junit.Assert.*;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.log4j.BasicConfigurator;
 import org.junit.Test;
 import org.repodriller.RepoDriller;
@@ -21,13 +24,16 @@ public class TestHello {
 		System.out.println("END");
 			      
 	}
-	//@Test
+	@Test
 	public void testCSV()
 	{
 		CsvReader reader = new CsvReader();
 		reader.read("devs.csv");
 		
-		System.out.println(reader.repoProcess.toString());
+		Map<String, List<Integer>> x = reader.repoLoc;
+		
+		System.out.println(x);
+		
 		System.out.println("END");
 	}
 	
@@ -43,7 +49,7 @@ public class TestHello {
 		reader.read("devs.csv");
 		
 		
-		System.out.println(reader.repoProcess.toString());
+		System.out.println(reader.repoLoc.toString());
 		System.out.println("END");
 	}
 

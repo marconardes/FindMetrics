@@ -124,15 +124,15 @@ public class Graf extends ApplicationFrame {
 
         render.setSeriesPaint(1, Color.BLUE);
         render.setSeriesShapesVisible(2, true);
-        render.setSeriesPaint(2, Color.RED);
+        render.setSeriesPaint(2, Color.GRAY);
         render.setSeriesShapesVisible(3, true);
-        render.setSeriesPaint(3, Color.BLUE);
+        render.setSeriesPaint(3, Color.YELLOW);
         render.setSeriesShapesVisible(4, true);
         render.setSeriesPaint(4, Color.BLUE);
-        render.setSeriesShapesVisible(5, false);
-        render.setSeriesShapesVisible(6, false);
-        render.setSeriesShapesVisible(7, false);
-        render.setSeriesShapesVisible(8, false);
+        render.setSeriesShapesVisible(5, true);
+        render.setSeriesShapesVisible(6, true);
+        render.setSeriesShapesVisible(7, true);
+        render.setSeriesShapesVisible(8, true);
         
         
         
@@ -159,8 +159,8 @@ public class Graf extends ApplicationFrame {
 		
 		CsvReader reader = new CsvReader();
 		reader.read("devs.csv");
-		System.out.println(reader.repoProcess.toString());
-		repoProcess = reader.repoProcess;
+		System.out.println(reader.repoLoc.toString());
+		repoProcess = reader.repoLoc;
     	
     	final Graf demo = new Graf("Linhas de codigo");
         
