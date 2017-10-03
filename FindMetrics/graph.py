@@ -3,6 +3,10 @@ import numpy as np
 import csv
 import matplotlib.pyplot as plt
 
+import seaborn as sns
+import pandas as pd
+
+
 def ReadCsv(listCsv):
     with open('devs.csv', 'rb') as f:
         reader = csv.reader(f)
@@ -24,8 +28,6 @@ def getFieldList(listCsv, list, hashMap, tamanho, n):
             hashMap.setdefault(listCsv[x][0], obj)
             obj = list()
 
-def formatBarGraf(hashMap):
-    print "nao implementado"
 
 def plotBarGraf(hashMap):
     print "nao implementado"

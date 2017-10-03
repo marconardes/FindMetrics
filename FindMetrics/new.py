@@ -1,40 +1,71 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 15 11:20:18 2017
+import seaborn as sns
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
-@author: home
-"""
+def readCsv():
+    listCsv = pd.read_csv('devs.csv')
+    return listCsv
 
-import plotly.plotly as py
-import plotly.graph_objs as go
+def newDataFrame(lista):
+    print "INICIANDO"
+    i = 1
+    res = pd.DataFrame(columns=('Experimento', 'Task','Loc'))
+    
+    l=0
+    contador = len(lista)    
+    arr = []
+    print arr
+    for x in range(0, contador):
+        if "Nardes" in lista["diretorio"][x]:
+            arr.append("With Metadata")
+            arr.append("Task"+str(i))
+            arr.append(lista['Loc'][x])
+            res.loc[x]=arr
+            arr=[]
+            if(i == 10):
+                i = 0
+            i =  i+1
+        
+        if "exp1groupB" in lista["diretorio"][x]:
+            arr.append("With Metadata")
+            arr.append("Task"+str(i))
+            arr.append(lista['Loc'][x])
+            res.loc[x]=arr
+            arr=[]
+            if(i == 10):
+                i = 0
+            i =  i+1
+        if "Guerra" in lista["diretorio"][x]:
+            arr.append("Winouth Metadata")
+            arr.append("Task"+str(i))
+            arr.append(lista['Loc'][x])
+            res.loc[x]=arr
+            arr=[]
+            if(i == 10):
+                i = 0
+            i =  i+1
+        if "exp1groupA" in lista["diretorio"][x]:
+            arr.append("Winouth Metadata")
 
-x = ['1', '1', '1','2', '2', '2']
+            arr.append("Task"+str(i))
+            arr.append(lista['Loc'][x])
+            res.loc[x]=arr
+            arr=[]
+            if(i == 10):
+                i = 0
+            i =  i+1
+    print res
+    return res
+    
 
-trace0 = go.Box(
-    y=[0.2, 0.2, 0.6, 1.0, 0.5, 0.4],
-    x=x,
-    name='kale',
-    marker=dict(
-        color='#3D9970'
-    )
-)
-trace1 = go.Box(
-    y=[0.6, 0.7, 0.3, 0.6, 0.0, 0.5],
-    x=x,
-    name='radishes',
-    marker=dict(
-        color='#FF4136'
-    )
-)
+listaCsv = readCsv()
 
-data = [trace0, trace1]
-layout = go.Layout(
-    yaxis=dict(
-        title='normalized moisture',
-        zeroline=False
-    ),
-    boxmode='group'
-)
-fig = go.Figure(data=data, layout=layout)
-py.plot(fig)
+serie = newDataFrame(listaCsv)
+
+#series = pd.Series(df)
+
+sns.set_style("whitegrid")
+tips = sns.load_dataset("tips")
+ax = sns.boxplot(x="Loc", y="Task", hue="Experimento",data=serie)
+ax.get_figure().savefig('ax.png')

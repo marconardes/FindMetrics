@@ -43,6 +43,8 @@ public class RepodrillerMinner implements Study {
 		.in(GitRepository.singleProject("/home/home/git/exp1groupAsub2"))
 		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub4"))
 		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub2"))
+		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub5"))
+		.in(GitRepository.singleProject("/home/home/git/exp1groupAsub7"))
 		.through(Commits.all())
 		.process(dv2,file)
 		.mine();

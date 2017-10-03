@@ -1,0 +1,161 @@
+Alfredo M. Funada
+Usando API de Reflexão do Java
+TASK 
+1
+IMPLEMENTAÇÃO
+nan
+DIFICULDADES
+nan
+TASK 
+2
+IMPLEMENTAÇÃO
+nan
+DIFICULDADES
+nan
+TASK 
+3
+nan
+DIFICULDADES
+nan
+David Buzatto
+Usando Esfinge Metadata
+TASK 
+1
+IMPLEMENTAÇÃO
+Implementei utilizando a IDE NetBeans, visto que o Eclipse estava dando muitos erros. Acredito que na cópia dos arquivos prontos do NetBeans para o Eclipse eu talvez tenhe entendido o motivo dos erros do Eclipse. A próxima tarefa tentarei fazer no Eclipse.
+DIFICULDADES
+Gostei da API Esfinge, mas ainda não consigo decidir se é melhor usá-la ou ir direto com a API de reflexão do Java. Por enquanto, continuaria com a API do Java, visto que parece ser mais direta ao ponto, ao invés de ter que ficar criando classes de container com n anotações.
+TASK 
+2
+IMPLEMENTAÇÃO
+Implementei no Eclipse, foi tudo bem. Realizei os testes um por um até tudo estar ok, além de usar diversos printlns para verificar alguns valores. Fiz os testes inicial e da tarefa 1, que ficaram quebrados, ajustei todo o código até tudo passar. Está tudo ok.
+DIFICULDADES
+nan
+TASK 
+3
+IMPLEMENTAÇÃO
+Fiz a implementação usando tanto a API do Java quanto a Esfinge.
+DIFICULDADES
+nan
+TASK 
+4
+IMPLEMENTAÇÃO
+nan
+DIFICULDADES
+nan
+TASK 
+5
+IMPLEMENTAÇÃO
+nan
+DIFICULDADES
+nan
+TASK 
+6
+IMPLEMENTAÇÃO
+De forma parecida com a tarefa das anotações para texto. Parei um pouco para dar uma refatorada no código, criando uma classe para abrigar diversos métodos estáticos para o algoritmo de mapeamento.
+DIFICULDADES
+nan
+TASK 
+7
+IMPLEMENTAÇÃO
+Adaptação do algoritmo para ser recursivo possibilitando o tratamento de @CompositeParameter
+DIFICULDADES
+nan
+TASK 
+9
+IMPLEMENTAÇÃO
+nan
+DIFICULDADES
+nan
+TASK 
+10
+IMPLEMENTAÇÃO
+nan
+DIFICULDADES
+nan
+TASK 
+8
+Utilizei a API de reflexão do Java.
+DIFICULDADES
+Foram feitas diversas tentativas usando o Esfinge Metadata, mas infelizmente não consegui fazer o mecanismo de processadores funcionar. Comecei diversas vezes do zero, seguindo o tutorial do youtube, mas não consegui mapear as classes com anotações customizadas para dentro do container. Algum detalhe ficou para trás. Como última alternativa implementei a funcionalidade usando quase que totalmente a API de reflexão do Java.
+Denny Paulista Azevedo Filho
+Usando API de Reflexão do Java
+TASK 
+1
+IMPLEMENTAÇÃO
+Depois de analisar os testes solicitados, e com base nos exercícios anteriores, criei a anotação, conforme solicitado, e implementei, inicialmente, a busca pelo nome (parâmetro da anotação). Na sequencia implementei uma busca do nome da anotação, nos parâmetros passados no acionamento do método, um Arrays de Strings, que invocaria um método de atribuição (invocando os métodos setters correspondentes), para as situações previstas na tarefa. Implementei um método que invocava o Setter do Field correspondente ao nome passado, com o valor booleano informado. O último ajuste foi a troca da exceção padrão, pela criada na tarefa e utilizada nos testes. 
+DIFICULDADES
+Minha maior dificuldade ainda é no retorno do uso da Linguagem Java, nos dois últimos dois anos apenas trabalhei com C# e Python. O uso de reflexões e anotações é novo para mim, logo, ainda tenho uma curva de aprendizado a cumprir, isso só causa uma lentidão no processo de solução, mas não uma barreira.
+TASK 
+2
+IMPLEMENTAÇÃO
+Aproveitei o código da tarefa 1, ajustando par os requisitos da nova tarefa. Foi necessário um ajuste no código da tarefa 1, para manter os dois testes funcionais. Acredito que ainda caiba alguma refatoração, mas de imediato a solução adotada atende as exigências do teste.
+DIFICULDADES
+nan
+TASK 
+3
+IMPLEMENTAÇÃO
+Aproveitamento do código básico da task2, fazendo busca da anotação, incluindo a busca na classe. 
+DIFICULDADES
+nan
+TASK 
+4
+IMPLEMENTAÇÃO
+Aproveitei os códigos anteriores das task 2 e 3, para localização das annotations, extração de nomes, métodos, parâmetros e valores. Fiz um ajuste na verificação da annotation Mandatory, para comportar as novas funcionalidades. E montei uma verificação para a nova annotation (Numericvalue) levando em consideração a diversidade de tipos, necessitando conversões, e o modo diferente para o acionamento dos métodos (até aqui o nome indicava o método). Não foi talves a solução mais elegante, mas está funcional....talvez uma melhor aplicação de técnicas mais avançadas de OO permita um reajuste do código.
+DIFICULDADES
+nan
+TASK 
+5
+IMPLEMENTAÇÃO
+Com base na tarefa anterior, foi efetuado os ajustes para determinar as anotações específicas, modificação do método para a anotação Mandatory.
+DIFICULDADES
+nan
+TASK 
+6
+IMPLEMENTAÇÃO
+Modificação e adaptação da atividade 5.
+DIFICULDADES
+nan
+TASK 
+6
+IMPLEMENTAÇÃO
+Modificação e adaptação da atividade 5.
+DIFICULDADES
+nan
+TASK 
+7
+Criei nova Instância de ParamMapper, para receber a classe do elemento composto. E com isso criei uma "recursividade" da classe. Verificando todas as possibilidades de annotations já verificados.
+DIFICULDADES
+Como ocorreu mudanças nas chamadas dos métodos Setters, foi necessário ajustes no  código já testado.
+Luiz Wagner Tavares Nascimento
+Usando Esfinge Metadata
+TASK 
+1
+IMPLEMENTAÇÃO
+Criei o container para leitura dos parâmetros da classe pelo Esfinge Metadata, container para armazenar o valor das anotações e utilizei API Reflection para setar o valor dos parâmetros encontrados nos argumentos na nova instância da classe de teste.
+DIFICULDADES
+Dificuldade de entender como utilizar o Esfinge Metadata, mesmo seguindo o tutorial na documentação.
+TASK 
+2
+IMPLEMENTAÇÃO
+Criei a anotação @TextValue, seu respectivo FieldContainer para leitura no ParamContainer pelo EsfigeMetadata e refatorei o método readParameters da classe ParamMapper a fim de extrair o texto dos parâmetros passados nos argumentos. Foi criado também um método privado na classe ParamMapper para validação dos argumentos segundo os requisitos.
+DIFICULDADES
+Dificuldade não houve dessa vez, pois foi necessário apenas repetir a leitura da anotação já criada.
+TASK 
+3
+IMPLEMENTAÇÃO
+Foi criada a anotação @Mandatory e um método privado na classe ParamMapper para checar os parâmetros obrigatórios. Feita a leitura das anotações utilizando a funcionalidade do Esfinge Metadata AnnotationFinder.findAnnotation e uma lógica de comparação da existência da anotação e a leitura dos parâmetros passados na linha de comando.
+DIFICULDADES
+Não foi difícil incrementar a funcionalidade de parâmetro mandatório, apesar de não ter ficado confuso na documentação qual anotação utilizar, se era a @SearchInsideAnnotations ou @SearchOnEnclosingElements. Após a aplicação no caso de teste, percebi que era a @SearchOnEnclosingElements.
+TASK 
+4
+IMPLEMENTAÇÃO
+Inicialmente foi criado o container para a anotação numérica e o novo método de leitura dos parâmetros numéricos, conforme as tarefas anteriores. Porém, como o método ficou grande e repetitivo pela quantidade de parâmetros numéricos possíveis, foi feita uma refatoração para retirar a repetição de código e para contornar um comportamento adverso do Esfinge Metadata.
+DIFICULDADES
+A dificuldade foi contornar o fato de que os testes estavam passando isoladamente de cada tarefa, porém quando executados todos em conjunto (ou por meio do mvn test), ocorria erro por conta do container possuir anotações das classes dos testes anteriores. Dessa forma, foi necessário refatorar o código para contornar esse comportamento não esperado, ou pelo menos não conhecido por mim até então.
+TASK 
+5
+IMPLEMENTAÇÃO
+Foi criados os containers para ParameterLength e ParameterFormat e criados métodos de validação dentro da lógica de leitura de TextValue, caso existam as novas anotações, bem como um método de validação caso uma das novas anotações esteja configurada sem haver @TextValue presente.
+DIFICULDADES
+A lógica implementada aparentemente estava toda correta, porém ao executar os testes do JUnit apareciam erros aleatórios em diferentes métodos de teste. Foi observado comportamento adverso devido 

@@ -3,6 +3,8 @@
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
 
 def ReadCsv(listCsv):
     with open('devs.csv', 'rb') as f:
@@ -28,13 +30,13 @@ def plotLineGraf(hashMap,labelx,labely):
     for key, value in hashMap.items():
         x = key.split('/')
         if "Nardes" in key:
-            plt.plot(value, label=x[4], color='green')
+            plt.plot(value, label="Com Metadata", color='Red')
         elif "Guerra" in key:
-            plt.plot(value, label=x[4], color='blue')
+            plt.plot(value, label="Sem Metadata", color='Blue')
         elif "exp1groupA" in key:
-            plt.plot(value, label=x[4], color='blue')
+            plt.plot(value, color='Blue')
         elif "exp1groupB" in key:
-            plt.plot(value, label=x[4], color='green')
+            plt.plot(value,  color='Red')
         plt.legend()
     
     plt.ylabel(labely)
@@ -111,9 +113,29 @@ def calcularDp(hashElement):
 
     
 
+def plotBar(hash,figname,a, b,c):
+    pdd = pd.DataFrame(columns=[a, b,c])
+    for key, value in hash.items():
+        for x in range(0, len(value)):
+            y = x + 1
+            if "Nardes" in key:
+                pdd.loc[len(pdd)] = ['Com Metadata', "Task " + str(y), value[x]]
+            elif "Guerra" in key:
+                pdd.loc[len(pdd)] = ['Sem Metadata', "Task " + str(y), value[x]]
+            elif "exp1groupA" in key:
+                pdd.loc[len(pdd)] = ['Sem Metadata', "Task " + str(y), value[x]]
+            elif "exp1groupB" in key:
+                pdd.loc[len(pdd)] = ['Com Metadata', "Task " + str(y), value[x]]
     
-def formatBarGraf(hashMap):
-    print "nao implementado"
+    sns.set_style("whitegrid")
+
+    tips = sns.load_dataset("tips")
+    flatui = ["#99bbff", "#ff8080"]
+    sns.set_palette(flatui)
+    #sns.palplot(sns.color_palette())    
+    ax = sns.boxplot(x=c, y="TASK", hue="TIPO", data=pdd)
+    ax.get_figure().savefig(figname)
+    ax.get_figure().clf()
 
 def plotBarGraf(hashMap):
     print "nao implementado"
@@ -129,7 +151,6 @@ ReadCsv(listCsv)
 tamanho = len(listCsv)
 getFieldList(listCsv, list, hashMap, tamanho, 2)
 plotLineGraf(hashMap,"Commits","Loc")
-formatBarGraf(hashMap)
 
 hashMap2={}
 getFieldList(listCsv, list, hashMap2, tamanho, 3)
@@ -137,13 +158,6 @@ plotLineGraf(hashMap2,"Commits","WMC")
 
 separavalores(hashMap,hashSemMetadata,hashComMetadata)
 
-mediaComMetadata = calcularMedia(hashComMetadata)
-mediaSemMetadata = calcularMedia(hashSemMetadata)
-#PLOT DAS MEDIAS
-plt.plot(mediaComMetadata, label="label", color='blue')
-plt.plot(mediaSemMetadata, label="label", color='red')
+plotBar(hashMap,"loc.png","TIPO","TASK","LOC")
 
-#CALCULO DO DESVIO PADRAO
-dpComMetadata = calcularDp(hashComMetadata)
-
-
+plotBar(hashMap2,"wmc.png","TIPO","TASK","WMC")
