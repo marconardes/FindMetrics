@@ -21,6 +21,10 @@ public class DevelopersVisitor2 implements CommitVisitor{
 		try {
 				int codeLine = 0;
 				int wmc = 0;
+				int cbo = 0;
+				int lcom = 0;
+				int nom =0;
+				int nof = 0;
 				System.out.println(repo.getPath());
 				
 				repo.getScm().checkout(commit.getHash());
@@ -34,6 +38,13 @@ public class DevelopersVisitor2 implements CommitVisitor{
 								
 						wmc+=result.getWmc();
 						
+						cbo+=result.getCbo();
+						
+						lcom+= result.getLcom();
+						
+						nom+= result.getNom();
+						
+						nof = result.getNof();
 					}
 				}
 				
@@ -42,7 +53,7 @@ public class DevelopersVisitor2 implements CommitVisitor{
 							repo.getPath(),
 							commit.getMsg(),
 							codeLine,
-							wmc
+							wmc,cbo,lcom,nom,nof
 						);
 				}
 				

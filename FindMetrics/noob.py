@@ -43,17 +43,6 @@ def plotLineGraf(hashMap,labelx,labely):
     plt.xlabel(labelx)
     plt.show()
 
-def separavalores(hashMap,hashSemMetadata,hashComMetadata):
-    for key, value in hashMap.items():
-        if "Nardes" in key:
-            hashComMetadata.setdefault(key,value)
-        elif "Guerra" in key:
-            hashSemMetadata.setdefault(key,value)
-        elif "exp1groupA" in key:
-            hashSemMetadata.setdefault(key,value)
-        elif "exp1groupB" in key:
-            hashComMetadata.setdefault(key,value)
-
 
 def calcularMedia(hashElement):
     print"nao implementado"
@@ -113,7 +102,7 @@ def calcularDp(hashElement):
 
     
 
-def plotBar(hash,figname,a, b,c):
+def plotBarGraf(hash,figname,a, b,c):
     pdd = pd.DataFrame(columns=[a, b,c])
     for key, value in hash.items():
         for x in range(0, len(value)):
@@ -129,7 +118,6 @@ def plotBar(hash,figname,a, b,c):
     
     sns.set_style("whitegrid")
 
-    tips = sns.load_dataset("tips")
     flatui = ["#99bbff", "#ff8080"]
     sns.set_palette(flatui)
     #sns.palplot(sns.color_palette())    
@@ -137,13 +125,9 @@ def plotBar(hash,figname,a, b,c):
     ax.get_figure().savefig(figname)
     ax.get_figure().clf()
 
-def plotBarGraf(hashMap):
-    print "nao implementado"
     
     
     
-hashSemMetadata={}
-hashComMetadata={}
 
 listCsv = list()
 hashMap={}
@@ -156,8 +140,7 @@ hashMap2={}
 getFieldList(listCsv, list, hashMap2, tamanho, 3)
 plotLineGraf(hashMap2,"Commits","WMC")
 
-separavalores(hashMap,hashSemMetadata,hashComMetadata)
 
-plotBar(hashMap,"loc.png","TIPO","TASK","LOC")
+plotBarGraf(hashMap,"loc.png","TIPO","TASK","LOC")
 
-plotBar(hashMap2,"wmc.png","TIPO","TASK","WMC")
+plotBarGraf(hashMap2,"wmc.png","TIPO","TASK","WMC")
