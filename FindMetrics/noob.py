@@ -83,8 +83,15 @@ def plotBarGraf(hash,figname,a, b,c):
     
 def xdivy(hash1,hash2):
     f={}
-    z = len(hash1)
-    print z
+
+    for key, value in hash1.items():
+        n=[]
+        value2 = hash2.get(key)
+        for x in range(0, len(value)):
+            z = float(value[x])/float(value2[x])
+            n.append(z)
+        
+        f.setdefault(key,n)        
     return f
     
 
@@ -125,9 +132,12 @@ getFieldList(listCsv, list, nom, tamanho, 5)
 plotLineGraf(wmc,"Commits","NOF")
 plotBarGraf(wmc,"nof.png","TIPO","TASK","NOF")
 
-zzz = xdivy(wmc,nom)
+wmcxnom = xdivy(wmc,nom)
 
 
 incremento = generateIncrement(loc)
 
 plotBarGraf(incremento,"incremento.png","TIPO","TASK","INCREMENTO")
+
+plotBarGraf(wmcxnom,"wmcxnom.png","TIPO","TASK","wmcxnom")
+plotLineGraf(wmcxnom,"Commits","wmcxnom")
