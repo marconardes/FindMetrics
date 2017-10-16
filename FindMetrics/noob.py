@@ -27,7 +27,6 @@ def getFieldList(listCsv, list, hashMap, tamanho, n):
 
 def plotLineGraf(hashMap,labelx,labely):
     for key, value in hashMap.items():
-        x = key.split('/')
         if "Nardes" in key:
             plt.plot(value, label="With Metadata", color='Red')
         elif "Guerra" in key:
@@ -103,41 +102,53 @@ ReadCsv(listCsv)
 tamanho = len(listCsv)
 getFieldList(listCsv, list, loc, tamanho, 2)
 plotLineGraf(loc,"Commits","Loc")
-plotBarGraf(loc,"loc.png","TIPO","TASK","LOC")
+plotBarGraf(loc,"Box/loc.png","TIPO","TASK","LOC")
 
 
 
 wmc={}
 getFieldList(listCsv, list, wmc, tamanho, 3)
 plotLineGraf(wmc,"Commits","WMC")
-plotBarGraf(wmc,"wmc.png","TIPO","TASK","WMC")
+plotBarGraf(wmc,"Box/wmc.png","TIPO","TASK","WMC")
 
 cbo={}
 getFieldList(listCsv, list, cbo, tamanho, 4)
 plotLineGraf(wmc,"Commits","CBO")
-plotBarGraf(wmc,"cbo.png","TIPO","TASK","CBO")
+plotBarGraf(wmc,"Box/cbo.png","TIPO","TASK","CBO")
 
 lcom={}
 getFieldList(listCsv, list, lcom, tamanho, 5)
 plotLineGraf(wmc,"Commits","LCOM")
-plotBarGraf(wmc,"lcom.png","TIPO","TASK","LCOM")
+plotBarGraf(wmc,"Box/lcom.png","TIPO","TASK","LCOM")
 
 nom={}
 getFieldList(listCsv, list, nom, tamanho, 5)
 plotLineGraf(wmc,"Commits","NOM")
-plotBarGraf(wmc,"nom.png","TIPO","TASK","NOM")
+plotBarGraf(wmc,"Box/nom.png","TIPO","TASK","NOM")
 
 nof={}
-getFieldList(listCsv, list, nom, tamanho, 5)
+getFieldList(listCsv, list, nof, tamanho, 6)
 plotLineGraf(wmc,"Commits","NOF")
-plotBarGraf(wmc,"nof.png","TIPO","TASK","NOF")
+plotBarGraf(wmc,"Box/nof.png","TIPO","TASK","NOF")
 
 wmcxnom = xdivy(wmc,nom)
 
 
-incremento = generateIncrement(loc)
+incrementoLoc = generateIncrement(loc)
+incrementoCbo = generateIncrement(cbo)
+incrementoLcom = generateIncrement(lcom)
+incrementoNom = generateIncrement(nom)
+incrementoNof = generateIncrement(nof)
 
-plotBarGraf(incremento,"incremento.png","TIPO","TASK","INCREMENTO")
+
+plotBarGraf(incrementoLoc,"Incremento/incrementoLoc.png","TIPO","TASK","INCREMENTO LOC")
+plotBarGraf(incrementoCbo,"Incremento/incrementoCbo.png","TIPO","TASK","INCREMENTO CBO")
+plotBarGraf(incrementoLcom,"Incremento/incrementoLcom.png","TIPO","TASK","INCREMENTO LCOM")
+plotBarGraf(incrementoNom,"Incremento/incrementoNom.png","TIPO","TASK","INCREMENTO NOM")
+plotBarGraf(incrementoNof,"Incremento/incrementoNof.png","TIPO","TASK","INCREMENTO NOF")
+
+
+
 
 plotBarGraf(wmcxnom,"wmcxnom.png","TIPO","TASK","wmcxnom")
 plotLineGraf(wmcxnom,"Commits","wmcxnom")
