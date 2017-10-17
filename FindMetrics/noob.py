@@ -25,7 +25,7 @@ def getFieldList(listCsv, list, hashMap, tamanho, n):
             hashMap.setdefault(listCsv[x][0], obj)
             obj = list()
 
-def plotLineGraf(hashMap,labelx,labely):
+def plotLineGraf(hashMap,labelx,labely,name):
     for key, value in hashMap.items():
         if "Nardes" in key:
             plt.plot(value, label="With Metadata", color='Red')
@@ -39,7 +39,7 @@ def plotLineGraf(hashMap,labelx,labely):
     
     plt.ylabel(labely)
     plt.xlabel(labelx)
-    plt.show()
+    plt.savefig("lineGraf/"+name)
 
 
 def generateIncrement(hashMap):
@@ -60,6 +60,7 @@ def generateIncrement(hashMap):
 
 def plotBarGraf(hash,figname,a, b,c):
     pdd = pd.DataFrame(columns=[a, b,c])
+    print pdd
     for key, value in hash.items():
         for x in range(0, len(value)):
             y = x + 1
@@ -92,43 +93,94 @@ def xdivy(hash1,hash2):
         
         f.setdefault(key,n)        
     return f
+
+def freatureBoxGraf(Dados,savef):
+    zz = pd.DataFrame(columns=["Group", "Type", "LOC"])
+    for key, value in Dados.items():
+        for x in range(0, len(value)):
+            if (x == 0):
+                nome = "Start framework structure"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, zz)
+            elif ((x == 1) or (x == 3) or (x == 9)):
+                nome = "New mapping annotation"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, zz)
+            elif ((x == 2) or (x == 4) or (x == 5)):
+                nome = "Data validation"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, zz)
+            elif ((x == 6) or (x == 8)):
+                nome = "Feature enhancement"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, zz)
+            elif (x == 7):
+                nome = "Extension point"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, zz)
+        
+        sns.set_style("whitegrid")
+        flatui = ["#99bbff", "#ff8080"]
+        sns.set_palette(flatui)
+        plt.figure(figsize=(14, 12))
+        ax = sns.boxplot(x="LOC", y="Type", hue="Group", data=zz)
+        ax.get_figure().savefig(savef)
+        ax.get_figure().clf()
+
+
+def adicionaNoCerto(key,nome,valor,dataFrame):
     
+    if "Nardes" in key:
+         dataFrame.loc[len(dataFrame)] = ['With Metadata', nome,valor]
+    elif "Guerra" in key:
+         dataFrame.loc[len(dataFrame)] = ['Without Metadata', nome, valor]
+    elif "exp1groupA" in key:
+         dataFrame.loc[len(dataFrame)] = ['Without Metadata', nome, valor]
+    elif "exp1groupB" in key:
+         dataFrame.loc[len(dataFrame)] = ['With Metadata', nome, valor]
+
+    return dataFrame
+
+
+
+  
 
 listCsv = list()
 
 loc={}
+plt.figure(figsize=(14, 12))
 
 ReadCsv(listCsv)
 tamanho = len(listCsv)
 getFieldList(listCsv, list, loc, tamanho, 2)
-plotLineGraf(loc,"Commits","Loc")
+plotLineGraf(loc,"Commits","Loc",'loc.png')
 plotBarGraf(loc,"Box/loc.png","TIPO","TASK","LOC")
 
 
 
 wmc={}
 getFieldList(listCsv, list, wmc, tamanho, 3)
-plotLineGraf(wmc,"Commits","WMC")
+plotLineGraf(wmc,"Commits","WMC","wmc.png")
 plotBarGraf(wmc,"Box/wmc.png","TIPO","TASK","WMC")
 
 cbo={}
 getFieldList(listCsv, list, cbo, tamanho, 4)
-plotLineGraf(wmc,"Commits","CBO")
+plotLineGraf(wmc,"Commits","CBO","cbo.png")
 plotBarGraf(wmc,"Box/cbo.png","TIPO","TASK","CBO")
 
 lcom={}
 getFieldList(listCsv, list, lcom, tamanho, 5)
-plotLineGraf(wmc,"Commits","LCOM")
+plotLineGraf(wmc,"Commits","LCOM","lcom.png")
 plotBarGraf(wmc,"Box/lcom.png","TIPO","TASK","LCOM")
 
 nom={}
 getFieldList(listCsv, list, nom, tamanho, 5)
-plotLineGraf(wmc,"Commits","NOM")
+plotLineGraf(wmc,"Commits","NOM","nom.png")
 plotBarGraf(wmc,"Box/nom.png","TIPO","TASK","NOM")
 
 nof={}
 getFieldList(listCsv, list, nof, tamanho, 6)
-plotLineGraf(wmc,"Commits","NOF")
+plotLineGraf(wmc,"Commits","NOF","nof.png")
 plotBarGraf(wmc,"Box/nof.png","TIPO","TASK","NOF")
 
 wmcxnom = xdivy(wmc,nom)
@@ -150,5 +202,8 @@ plotBarGraf(incrementoNof,"Incremento/incrementoNof.png","TIPO","TASK","INCREMEN
 
 
 
-plotBarGraf(wmcxnom,"wmcxnom.png","TIPO","TASK","wmcxnom")
-plotLineGraf(wmcxnom,"Commits","wmcxnom")
+plotBarGraf(wmcxnom,"Incremento/wmcxnom.png","TIPO","TASK","wmcxnom")
+plotLineGraf(wmcxnom,"Commits","wmcxnom","wmcxnom.png")
+
+
+freatureBoxGraf(incrementoLoc,"Incremento/incrementoLocFreature.png")

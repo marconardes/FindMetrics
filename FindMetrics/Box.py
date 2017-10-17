@@ -7,31 +7,64 @@ Created on Fri Sep 15 10:34:15 2017
 
 
 
+
+
 """
 
 import seaborn as sns
 import pandas as pd
+import matplotlib.pyplot as plt
 
-def plotBar(hash,figname,a, b,c):
-    pdd = pd.DataFrame(columns=[a, b,c])
-    for key, value in hash.items():
+
+def freatureBoxGraf(Dados,savef):
+    pdd = pd.DataFrame(columns=["Group", "Type", "LOC"])
+    for key, value in Dados.items():
         for x in range(0, len(value)):
-            y = x + 1
-            if "Nardes" in key:
-                pdd.loc[len(pdd)] = ['Com Metadata', "Task " + str(y), value[x]]
-            elif "Guerra" in key:
-                pdd.loc[len(pdd)] = ['Sem Metadata', "Task " + str(y), value[x]]
-            elif "exp1groupA" in key:
-                pdd.loc[len(pdd)] = ['Sem Metadata', "Task " + str(y), value[x]]
-            elif "exp1groupB" in key:
-                pdd.loc[len(pdd)] = ['Com Metadata', "Task " + str(y), value[x]]
+            if (x == 0):
+                nome = "Start framework structure"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, pdd)
+            elif ((x == 1) or (x == 3) or (x == 9)):
+                nome = "New mapping annotation"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, pdd)
+            elif ((x == 2) or (x == 4) or (x == 5)):
+                nome = "Data validation"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, pdd)
+            elif ((x == 6) or (x == 8)):
+                nome = "Feature enhancement"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, pdd)
+            elif (x == 7):
+                nome = "Extension point"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, pdd)
+        
+        sns.set_style("whitegrid")
+        flatui = ["#99bbff", "#ff8080"]
+        sns.set_palette(flatui)
+        plt.figure(figsize=(14, 12))
+        ax = sns.boxplot(x="LOC", y="Type", hue="Group", data=pdd)
+        ax.get_figure().savefig(savef)
+        ax.get_figure().clf()
+
+
+def adicionaNoCerto(key,nome,valor,dataFrame):
     
-    sns.set_style("whitegrid")
-    tips = sns.load_dataset("tips")
-    ax = sns.boxplot(x="INCREMENTO", y="TASK", hue="TIPO", data=pdd, palette="Set3")
-    ax.get_figure().savefig(figname)
+    if "Nardes" in key:
+         dataFrame.loc[len(pdd)] = ['With Metadata', nome, value[x]]
+    elif "Guerra" in key:
+         dataFrame.loc[len(pdd)] = ['Without Metadata', nome, value[x]]
+    elif "exp1groupA" in key:
+         dataFrame.loc[len(pdd)] = ['Without Metadata', nome, value[x]]
+    elif "exp1groupB" in key:
+         dataFrame.loc[len(pdd)] = ['With Metadata', nome, value[x]]
+
+    return dataFrame
 
 
-hashmap = {'/home/home/git/exp1groupBsub4': [137, 90, 25, 174, 26, 63, 43, 83, 14, 60], '/home/home/git/Piloto_Nardes': [148, 92, 20, 67, 206, 100, 114, 7, 213, -4], '/home/home/git/Piloto_Guerra': [97, 58, 22, 56, 54, 56, 29, 51, 67, 30], '/home/home/git/exp1groupAsub2': [78, 57, 127, 44, 29, 36, 18, -5, 40, 25], '/home/home/git/exp1groupBsub2': [161, 114, 23, 131, 171, 228, 151, 63, 117, 55]}
+freatureBoxGraf(z)
 
-plotBar(hashmap)
+    
+    
