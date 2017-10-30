@@ -24,9 +24,7 @@ public class RepodrillerMinner implements Study {
 	CSVFile file;
 	public RepodrillerMinner()
 	{
-		 //dv = new DevelopersVisitor();
-		file = new CSVFile("devs.csv");
-		//file.write("repo.getPath()","commit.getMsg()","codeLine",	"wmc");
+		file = new CSVFile("csv/devs.csv");
 		dv2 = new DevelopersVisitor2();
 		
 		
@@ -36,15 +34,17 @@ public class RepodrillerMinner implements Study {
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
+		
 		new RepositoryMining()
-		.in(GitRepository.singleProject("/home/home/git/Piloto_Nardes"))
-		.in(GitRepository.singleProject("/home/home/git/Piloto_Guerra"))
-		.in(GitRepository.singleProject("/home/home/git/exp1groupAsub2"))
-		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub4"))
-		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub2"))
 		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub5"))
+		.in(GitRepository.singleProject("/home/home/git/exp1groupAsub8"))
 		.in(GitRepository.singleProject("/home/home/git/exp1groupAsub7"))
+		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub9"))
+		.in(GitRepository.singleProject("/home/home/git/exp1groupAsub9"))
+		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub11"))
+		.in(GitRepository.singleProject("/home/home/git/exp1groupAsub10"))
+		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub10"))
+		.in(GitRepository.singleProject("/home/home/git/exp1groupBsub7"))
 		.through(Commits.all())
 		.process(dv2,file)
 		.mine();

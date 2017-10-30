@@ -6,7 +6,7 @@ import seaborn as sns
 import pandas as pd
 
 def ReadCsv(listCsv):
-    with open('devs.csv', 'rb') as f:
+    with open('csv/devs.csv', 'rb') as f:
         reader = csv.reader(f)
         for row in reader:
             listCsv.append(row)
@@ -26,17 +26,36 @@ def getFieldList(listCsv, list, hashMap, tamanho, n):
             obj = list()
 
 def plotLineGraf(hashMap,labelx,labely,name):
+    
+    i=0
+    n=0
     for key, value in hashMap.items():
         if "Nardes" in key:
             plt.plot(value, label="With Metadata", color='Red')
+            i=1
         elif "Guerra" in key:
             plt.plot(value, label="Without Metadata", color='Blue')
+            n=1
+        elif ("exp1groupA" in key) and(i==0):
+            plt.plot(value, label="Without Metadata", color='Blue')
+            i=1
+        elif ("exp1groupB" in key) and(n==0):
+           plt.plot(value, label="With Metadata", color='Blue')
+           n=1
         elif "exp1groupA" in key:
             plt.plot(value, color='Blue')
         elif "exp1groupB" in key:
             plt.plot(value,  color='Red')
         plt.legend()
     
+    
+    increment = generateIncrement(hashMap)
+    
+    
+    incValue = increment.get("/home/home/git/exp1groupBsub5")
+    
+    print incValue
+        
     plt.ylabel(labely)
     plt.xlabel(labelx)
     plt.savefig("lineGraf/"+name)
@@ -61,6 +80,7 @@ def generateIncrement(hashMap):
 def plotBarGraf(hash,figname,a, b,c):
     pdd = pd.DataFrame(columns=[a, b,c])
     print pdd
+   
     for key, value in hash.items():
         for x in range(0, len(value)):
             y = x + 1
@@ -72,6 +92,7 @@ def plotBarGraf(hash,figname,a, b,c):
                 pdd.loc[len(pdd)] = ['Without Metadata', "Task " + str(y), value[x]]
             elif "exp1groupB" in key:
                 pdd.loc[len(pdd)] = ['With Metadata', "Task " + str(y), value[x]]
+            
     
     sns.set_style("whitegrid")
 
@@ -94,36 +115,37 @@ def xdivy(hash1,hash2):
         f.setdefault(key,n)        
     return f
 
-def freatureBoxGraf(Dados,savef):
-    zz = pd.DataFrame(columns=["Group", "Type", "LOC"])
+def freatureBoxGraf(Dados,savef,c):
+    dados = pd.DataFrame(columns=["Group", "Type", c])
     for key, value in Dados.items():
         for x in range(0, len(value)):
             if (x == 0):
                 nome = "Start framework structure"
                 valor = value[x]
-                adicionaNoCerto(key, nome, valor, zz)
+                adicionaNoCerto(key, nome, valor, dados)
             elif ((x == 1) or (x == 3) or (x == 9)):
                 nome = "New mapping annotation"
                 valor = value[x]
-                adicionaNoCerto(key, nome, valor, zz)
+                adicionaNoCerto(key, nome, valor, dados)
             elif ((x == 2) or (x == 4) or (x == 5)):
                 nome = "Data validation"
                 valor = value[x]
-                adicionaNoCerto(key, nome, valor, zz)
+                adicionaNoCerto(key, nome, valor, dados)
             elif ((x == 6) or (x == 8)):
                 nome = "Feature enhancement"
                 valor = value[x]
-                adicionaNoCerto(key, nome, valor, zz)
+                adicionaNoCerto(key, nome, valor, dados)
             elif (x == 7):
                 nome = "Extension point"
                 valor = value[x]
-                adicionaNoCerto(key, nome, valor, zz)
+                adicionaNoCerto(key, nome, valor, dados)
         
         sns.set_style("whitegrid")
         flatui = ["#99bbff", "#ff8080"]
         sns.set_palette(flatui)
         plt.figure(figsize=(14, 12))
-        ax = sns.boxplot(x="LOC", y="Type", hue="Group", data=zz)
+        print c
+        ax = sns.boxplot(x=c, y="Type", hue="Group", data=dados)
         ax.get_figure().savefig(savef)
         ax.get_figure().clf()
 
@@ -192,6 +214,7 @@ incrementoLcom = generateIncrement(lcom)
 incrementoNom = generateIncrement(nom)
 incrementoNof = generateIncrement(nof)
 
+plt.close('all')
 
 plotBarGraf(incrementoLoc,"Incremento/incrementoLoc.png","TIPO","TASK","INCREMENTO LOC")
 plotBarGraf(incrementoCbo,"Incremento/incrementoCbo.png","TIPO","TASK","INCREMENTO CBO")
@@ -199,11 +222,15 @@ plotBarGraf(incrementoLcom,"Incremento/incrementoLcom.png","TIPO","TASK","INCREM
 plotBarGraf(incrementoNom,"Incremento/incrementoNom.png","TIPO","TASK","INCREMENTO NOM")
 plotBarGraf(incrementoNof,"Incremento/incrementoNof.png","TIPO","TASK","INCREMENTO NOF")
 
-
+plt.close('all')
 
 
 plotBarGraf(wmcxnom,"Incremento/wmcxnom.png","TIPO","TASK","wmcxnom")
 plotLineGraf(wmcxnom,"Commits","wmcxnom","wmcxnom.png")
+plt.close('all')
 
-
-freatureBoxGraf(incrementoLoc,"Incremento/incrementoLocFreature.png")
+freatureBoxGraf(incrementoLoc,"Freature/incrementoLocFreature.png"," LOC")
+freatureBoxGraf(incrementoCbo,"Freature/incrementoCboFreature.png"," CBO")
+freatureBoxGraf(incrementoLcom,"Freature/incrementoLcomFreature.png"," LCOM")
+freatureBoxGraf(incrementoNom,"Freature/incrementoNomFreature.png"," NOM")
+freatureBoxGraf(incrementoNof,"Freature/incrementoNofFreature.png"," NOF")

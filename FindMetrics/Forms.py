@@ -21,6 +21,9 @@ def readCsv():
     return listCsv
 
 
+    
+
+
 def formatText(csv):
     contador = len(csv)
     valor = []
