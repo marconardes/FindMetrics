@@ -24,6 +24,24 @@ def getFieldList(listCsv, list, hashMap, tamanho, n):
             obj.append(int(listCsv[x][n]))
             hashMap.setdefault(listCsv[x][0], obj)
             obj = list()
+    
+    increment = generateIncrement(hashMap)
+    
+    
+    incValue = increment.get("/home/home/git/exp1groupBsub5")
+    
+    incCor = incValue[7]
+    incValue[7] = incValue[9]
+    incValue[9] =incCor
+    
+    tamanho = len(incValue)
+    
+    for x in range(1, tamanho):
+        incValue[x] = incValue[x-1]+incValue[x]
+    
+    hashMap["/home/home/git/exp1groupBsub5"]=incValue
+            
+    
 
 def plotLineGraf(hashMap,labelx,labely,name):
     
@@ -40,7 +58,7 @@ def plotLineGraf(hashMap,labelx,labely,name):
             plt.plot(value, label="Without Metadata", color='Blue')
             i=1
         elif ("exp1groupB" in key) and(n==0):
-           plt.plot(value, label="With Metadata", color='Blue')
+           plt.plot(value, label="With Metadata", color='Red')
            n=1
         elif "exp1groupA" in key:
             plt.plot(value, color='Blue')
@@ -49,13 +67,8 @@ def plotLineGraf(hashMap,labelx,labely,name):
         plt.legend()
     
     
-    increment = generateIncrement(hashMap)
     
     
-    incValue = increment.get("/home/home/git/exp1groupBsub5")
-    
-    print incValue
-        
     plt.ylabel(labely)
     plt.xlabel(labelx)
     plt.savefig("lineGraf/"+name)
@@ -207,7 +220,7 @@ plotBarGraf(wmc,"Box/nof.png","TIPO","TASK","NOF")
 
 wmcxnom = xdivy(wmc,nom)
 
-
+plt.close('all')
 incrementoLoc = generateIncrement(loc)
 incrementoCbo = generateIncrement(cbo)
 incrementoLcom = generateIncrement(lcom)

@@ -17,12 +17,55 @@ import csv as csv
 
 
 def readCsv():
-    listCsv = pd.read_csv('Relato.csv')
+    listCsv = pd.read_csv('csv/tarefas.csv')
     return listCsv
 
 
-    
+def readCsvFinal():
+    listCsv = pd.read_csv('csv/final.csv')
+    return listCsv
 
+def respost(csv):
+    contador = len(csv)
+    valor =[]
+    print contador
+    for x in range(0, contador):
+            valor.append('Carimbo de data/hora')
+            valor.append(csv['Carimbo de data/hora'][x])
+            
+            valor.append('Nome')
+            valor.append(csv['Nome'][x])
+                
+            valor.append('Grupo do Experimento')
+            valor.append(csv['Grupo do Experimento'][x])
+            
+            valor.append('Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.')
+            valor.append(csv['Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.'][x])
+            
+            valor.append('Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.')
+            valor.append(csv['Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.'][x])
+            
+            valor.append('Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.')
+            valor.append(csv['Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.'][x])
+
+            valor.append('Quais funcionalidades do Esfinge Metadata você utilizou?')
+            valor.append(csv['Quais funcionalidades do Esfinge Metadata você utilizou?'][x])
+
+            valor.append('Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata')
+            valor.append(csv['Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata'][x])
+
+            valor.append('Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata')
+            valor.append(csv['Descreva as principais desvantagens que você enxergou no uso do Esfinge Metadata'][x])
+
+            valor.append('Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"')
+            valor.append(csv['Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"'][x])
+
+            valor.append('Justifique sua resposta anterior')
+            valor.append(csv['Justifique sua resposta anterior'][x])         
+            
+            valor.append("==================================")
+            
+    return valor
 
 def formatText(csv):
     contador = len(csv)
@@ -103,14 +146,27 @@ formato = newFormat(relatorio)
 
 formated = formatText(relatorio)
 
-with open('Tempo.csv','wb') as f:
+
+
+final = respost(readCsvFinal())
+
+with open('csv/Tempo.csv','wb') as f:
     w = csv.writer(f)
     w.writerows(formato.items())
 
 
-with open("Relatorios.txt", "w") as text_file:
+with open("csv/Relatorios.txt", "w") as text_file:
     for x in formated:
             z = str(x)
-            print z
             text_file.write(z)
             text_file.write("\n")
+            
+
+with open("csv/RelatorioFinal.txt", "w") as text_file:
+    for x in final:
+            z = str(x)
+            text_file.write("\n")
+            text_file.write(z)
+            text_file.write("\n")
+
+

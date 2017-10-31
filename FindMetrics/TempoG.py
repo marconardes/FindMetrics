@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 listCsv =[]
 
 def readCsv():
-    with open('Tempo.csv', 'rb') as f:
+    with open('csv/Tempo.csv', 'rb') as f:
         reader = csv.reader(f)
         for row in reader:
             listCsv.append(row)
@@ -30,6 +30,7 @@ def toDict(lista):
         tamanhoSub = len(sublist)
         value=[]
         for z in range(0, tamanhoSub):
+                
             if(z >0):
                 value.append(float(sublist[z]))
                 
@@ -57,15 +58,17 @@ def totalTime(lista):
 
 
 def plotBarGraf(hash,figname,a, b,c):
+    print "BARGRAF"
     pdd = pd.DataFrame(columns=[a, b,c])
     print pdd
     for key, value in hash.items():
+        print key
         for x in range(0, len(value)):
             y = x + 1
-            if "Metadata" in key:
-                pdd.loc[len(pdd)] = ['With Metadata', "Task " + str(y), value[x]]
-            elif "Reflection" in key:
+            if "API" in key:
                 pdd.loc[len(pdd)] = ['Without Metadata', "Task " + str(y), value[x]]
+            elif "Meta" in key:
+                pdd.loc[len(pdd)] = ['With Metadata', "Task " + str(y), value[x]]
     
     sns.set_style("whitegrid")
 
@@ -84,13 +87,13 @@ def plotTime(hashMap,labelx,labely,name):
         if ("Metadata" in key) and (m==0):
             plt.plot(value, label="With Metadata", color='Red')
             m=1
-        elif ("Reflection" in key)and(i==0):
+        elif ("API" in key)and(i==0):
             plt.plot(value, label="Without Metadata", color='Blue')
             i=1
         if ("Metadata" in key) and (m==1):
             plt.plot(value,  color='Red')
             m=1
-        elif ("Reflection" in key)and(i==1):
+        elif ("API" in key)and(i==1):
             plt.plot(value,  color='Blue')
             i=1
         plt.legend()
@@ -125,20 +128,22 @@ def freatureBoxGraf(Dados,savef,c):
                 valor = value[x]
                 adicionaNoCerto(key, nome, valor, dados)
         
-        sns.set_style("whitegrid")
-        flatui = ["#99bbff", "#ff8080"]
-        sns.set_palette(flatui)
-        plt.figure(figsize=(14, 12))
-        print c
-        ax = sns.boxplot(x=c, y="Type", hue="Group", data=dados)
-        ax.get_figure().savefig(savef)
-        ax.get_figure().clf()
+    sns.set_style("whitegrid")
+    flatui = ["#99bbff", "#ff8080"]
+    sns.set_palette(flatui)
+    plt.figure(figsize=(14, 12))
+    print 'akuuuuuuuu'
+    print c
+    ax = sns.boxplot(x=c, y="Type", hue="Group", data=dados)
+    ax.get_figure().savefig(savef)
+    ax.get_figure().clf()
+    
 
 def adicionaNoCerto(key,nome,valor,dataFrame):
     
     if "Metadata" in key:
          dataFrame.loc[len(dataFrame)] = ['With Metadata', nome,valor]
-    elif "Reflection" in key:
+    elif "API" in key:
          dataFrame.loc[len(dataFrame)] = ['Without Metadata', nome, valor]
 
     return dataFrame
@@ -152,11 +157,11 @@ readCsv()
 dic = toDict(listCsv)
 plotTime(dic,"Task","Time","timeIncrement.png")
 plotBarGraf(dic,"timeLine//incrTime.png","TYPE","TASK","TIME")
-freatureBoxGraf(dic,"time.png"," Tempo")
+freatureBoxGraf(dic,"timeLine//freatureBox.png"," Tempo")
 
 
 
 incr = totalTime(dic)
 plotTime(incr,"Task","Time","timeLine.png")
-plotBarGraf(dic,"timeLine//boxTime.png","TYPE","TASK","TIME")
+plotBarGraf(incr,"timeLine//boxTime.png","TYPE","TASK","TIME")
 
