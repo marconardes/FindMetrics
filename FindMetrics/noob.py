@@ -106,7 +106,6 @@ def plotBarGraf(hash,figname,a, b,c):
             elif "exp1groupB" in key:
                 pdd.loc[len(pdd)] = ['With Metadata', "Task " + str(y), value[x]]
             
-    
     sns.set_style("whitegrid")
 
     flatui = ["#99bbff", "#ff8080"]
@@ -192,30 +191,35 @@ plotLineGraf(loc,"Commits","Loc",'loc.png')
 plotBarGraf(loc,"Box/loc.png","TIPO","TASK","LOC")
 
 
-
+plt.close("all")
 wmc={}
 getFieldList(listCsv, list, wmc, tamanho, 3)
 plotLineGraf(wmc,"Commits","WMC","wmc.png")
+plt.close("all")
 plotBarGraf(wmc,"Box/wmc.png","TIPO","TASK","WMC")
-
+plt.close("all")
 cbo={}
 getFieldList(listCsv, list, cbo, tamanho, 4)
-plotLineGraf(wmc,"Commits","CBO","cbo.png")
-plotBarGraf(wmc,"Box/cbo.png","TIPO","TASK","CBO")
-
+plotLineGraf(cbo,"Commits","CBO","cbo.png")
+plt.close("all")
+plotBarGraf(cbo,"Box/cbo.png","TIPO","TASK","CBO")
+plt.close("all")
 lcom={}
 getFieldList(listCsv, list, lcom, tamanho, 5)
-plotLineGraf(wmc,"Commits","LCOM","lcom.png")
-plotBarGraf(wmc,"Box/lcom.png","TIPO","TASK","LCOM")
-
+plotLineGraf(lcom,"Commits","LCOM","lcom.png")
+plt.close("all")
+plotBarGraf(lcom,"Box/lcom.png","TIPO","TASK","LCOM")
+plt.close("all")
 nom={}
-getFieldList(listCsv, list, nom, tamanho, 5)
-plotLineGraf(wmc,"Commits","NOM","nom.png")
-plotBarGraf(wmc,"Box/nom.png","TIPO","TASK","NOM")
+getFieldList(listCsv, list, nom, tamanho, 6)
+plotLineGraf(nom,"Commits","NOM","nom.png")
+plt.close("all")
+plotBarGraf(nom,"Box/nom.png","TIPO","TASK","NOM")
 
 nof={}
-getFieldList(listCsv, list, nof, tamanho, 6)
+getFieldList(listCsv, list, nof, tamanho, 7)
 plotLineGraf(wmc,"Commits","NOF","nof.png")
+plt.close("all")
 plotBarGraf(wmc,"Box/nof.png","TIPO","TASK","NOF")
 
 wmcxnom = xdivy(wmc,nom)
