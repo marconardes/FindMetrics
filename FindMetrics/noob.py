@@ -218,7 +218,7 @@ plotBarGraf(nom,"Box/nom.png","TIPO","TASK","NOM")
 
 nof={}
 getFieldList(listCsv, list, nof, tamanho, 7)
-plotLineGraf(wmc,"Commits","NOF","nof.png")
+plotLineGraf(nof,"Commits","NOF","nof.png")
 plt.close("all")
 plotBarGraf(wmc,"Box/nof.png","TIPO","TASK","NOF")
 
