@@ -1,6 +1,5 @@
 package testmm;
 
-import java.io.File;
 import java.util.List;
 
 import org.repodriller.domain.Commit;
@@ -17,7 +16,6 @@ public class DevelopersVisitor2 implements CommitVisitor{
 
 	@Override
 	public void process(SCMRepository repo, Commit commit, PersistenceMechanism writer) {
-		// TODO Auto-generated method stub
 		try {
 				int codeLine = 0;
 				int wmc = 0;
@@ -25,11 +23,16 @@ public class DevelopersVisitor2 implements CommitVisitor{
 				int lcom = 0;
 				int nom =0;
 				int nof = 0;
-				System.out.println(repo.getPath());
+				int ac = 0;
+				int uac = 0;
+				float cboNorm = 0;
+				float noc = 0; //number of classes
 				
 				repo.getScm().checkout(commit.getHash());
 				List<RepositoryFile> files = repo.getScm().files();
 				CKReport report = new CK().calculate(repo.getPath());
+				
+				noc = report.all().size();
 				
 				for(CKNumber result : report.all()) {
 					if(result.isError()) continue;
@@ -44,16 +47,24 @@ public class DevelopersVisitor2 implements CommitVisitor{
 						
 						nom+= result.getNom();
 						
-						nof = result.getNof();
+						nof += result.getNof();
+						
+						ac += result.getAc();
+						
+						uac += result.getUac();
+						
+						
 					}
 				}
+				
+				cboNorm = cbo/noc;
 				
 				if(codeLine>0) {
 					writer.write(
 							repo.getPath(),
 							commit.getMsg(),
 							codeLine,
-							wmc,cbo,lcom,nom,nof
+							wmc,cbo,lcom,nom,nof,ac,uac,cboNorm
 						);
 				}
 				

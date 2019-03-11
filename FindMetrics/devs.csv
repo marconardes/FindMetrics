@@ -1,60 +1,90 @@
-/home/home/git/Piloto_Nardes,Update task1 sem custom reader,148,26,15,31,20,3
-/home/home/git/Piloto_Nardes,Task2 Completa sem CustonReader,240,57,17,69,27,3
-/home/home/git/Piloto_Nardes,Finish task3,260,68,18,94,30,0
-/home/home/git/Piloto_Nardes,Commit Task4,327,103,20,182,37,0
-/home/home/git/Piloto_Nardes,Task5,533,139,45,220,60,3
-/home/home/git/Piloto_Nardes,Task6,633,171,49,322,72,3
-/home/home/git/Piloto_Nardes,Task7,747,199,60,393,79,3
-/home/home/git/Piloto_Nardes,Update,928,251,75,553,99,4
-/home/home/git/Piloto_Nardes,Task9 done,967,256,78,522,100,4
-/home/home/git/Piloto_Nardes,Refactor task10,963,261,81,480,100,4
-/home/home/git/Piloto_Guerra,Task 1,97,25,4,18,13,0
-/home/home/git/Piloto_Guerra,Task 2,155,46,8,21,20,0
-/home/home/git/Piloto_Guerra,Task 3,177,52,9,41,24,0
-/home/home/git/Piloto_Guerra,Task 4,233,80,12,47,28,0
-/home/home/git/Piloto_Guerra,Task 5,287,101,18,58,33,4
-/home/home/git/Piloto_Guerra,Task 6,343,125,24,60,37,3
-/home/home/git/Piloto_Guerra,Task 7,372,135,30,65,41,3
-/home/home/git/Piloto_Guerra,Task 8,423,151,38,72,47,3
-/home/home/git/Piloto_Guerra,Task 9,490,172,39,119,54,3
-/home/home/git/Piloto_Guerra,Task 10,520,177,42,119,56,3
-/home/home/git/exp1groupAsub2,Task 1 Matheus Monteiro,78,21,5,13,10,0
-/home/home/git/exp1groupAsub2,Task 2 correção!,135,43,6,16,11,0
-/home/home/git/exp1groupAsub2,Task 3,262,108,7,46,16,1
-/home/home/git/exp1groupAsub2,Task 4,306,152,8,55,17,1
-/home/home/git/exp1groupAsub2,Task 5,335,166,10,65,18,1
-/home/home/git/exp1groupAsub2,Task 6,371,196,12,65,18,1
-/home/home/git/exp1groupAsub2,Task 7,389,183,13,65,18,1
-/home/home/git/exp1groupAsub2,Task 8,384,196,15,66,20,1
-/home/home/git/exp1groupAsub2,Task 9,424,215,15,77,21,1
-/home/home/git/exp1groupAsub2,Task 10,449,229,16,77,21,1
-/home/home/git/exp1groupBsub4,Task 1,137,25,12,20,17,2
-/home/home/git/exp1groupBsub4,Task 2,227,54,19,38,25,2
-/home/home/git/exp1groupBsub4,Task 3,252,62,23,56,29,2
-/home/home/git/exp1groupBsub4,Task 4,426,149,34,84,42,2
-/home/home/git/exp1groupBsub4,Task 5,452,165,27,378,54,0
-/home/home/git/exp1groupBsub4,Task 6,515,195,29,673,64,0
-/home/home/git/exp1groupBsub4,Task 7,558,210,31,770,69,0
-/home/home/git/exp1groupBsub4,Task 8,641,234,35,974,78,0
-/home/home/git/exp1groupBsub4,Task 9,655,219,35,980,78,0
-/home/home/git/exp1groupBsub4,Task 10,715,243,37,1280,87,0
-/home/home/git/exp1groupBsub2,Correcting error detected in Task #1 tests.,161,39,16,36,22,3
-/home/home/git/exp1groupBsub2,Done Task #2,275,78,24,104,37,0
-/home/home/git/exp1groupBsub2,Done Task #3,298,84,25,112,38,0
-/home/home/git/exp1groupBsub2,"Done refactoring including for to navigate over container's fieldContainers.",429,122,31,238,54,0
-/home/home/git/exp1groupBsub2,Done Task #5,600,173,48,362,79,6
-/home/home/git/exp1groupBsub2,Done Task #6,828,244,66,630,111,6
-/home/home/git/exp1groupBsub2,Done Task #7,979,268,84,534,126,6
-/home/home/git/exp1groupBsub2,Task #8,986,270,84,535,128,6
-/home/home/git/exp1groupBsub2,Done Task #9,1042,287,84,552,131,6
-/home/home/git/exp1groupBsub2,Done Task #10,1214,320,104,716,154,6
-/home/home/git/exp1groupAsub7,Task 1,102,21,6,13,13,2
-/home/home/git/exp1groupAsub7,Task 2,147,41,8,19,15,2
-/home/home/git/exp1groupAsub7,Task 3,164,48,9,23,16,4
-/home/home/git/exp1groupAsub7,Task 4,193,62,11,23,16,4
-/home/home/git/exp1groupAsub7,Task 5,277,78,16,43,27,3
-/home/home/git/exp1groupAsub7,Task 6,330,94,18,43,27,3
-/home/home/git/exp1groupAsub7,Task 7,371,106,19,59,29,7
-/home/home/git/exp1groupAsub7,Task 8,420,123,22,82,34,7
-/home/home/git/exp1groupAsub7,Task 9,461,135,22,97,36,7
-/home/home/git/exp1groupAsub7,Task 10,700,191,95,66,52,4
+/Users/helena/metadata_exp/exp1groupAsub10,Task #1,109,24,6,15,13,0,0
+/Users/helena/metadata_exp/exp1groupAsub10,Task #2,126,25,5,16,11,0,0
+/Users/helena/metadata_exp/exp1groupAsub10,Task #3,135,31,6,16,11,2,0
+/Users/helena/metadata_exp/exp1groupAsub10,Task #4,224,79,11,16,12,1,0
+/Users/helena/metadata_exp/exp1groupAsub10,Task #5,258,92,15,16,12,0,0
+/Users/helena/metadata_exp/exp1groupAsub10,Task #6,321,119,19,16,12,0,0
+/Users/helena/metadata_exp/exp1groupAsub10,Task #7,335,123,22,20,13,0,0
+/Users/helena/metadata_exp/exp1groupAsub10,Task #8,362,129,24,21,15,0,0
+/Users/helena/metadata_exp/exp1groupAsub10,Task #9,422,148,24,26,17,0,0
+/Users/helena/metadata_exp/exp1groupAsub10,Task #10,464,162,26,26,17,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 1,102,20,6,13,13,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 2,147,34,8,19,15,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 3,164,40,9,23,16,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 4,193,50,11,23,16,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 5,277,60,16,43,27,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 6,330,70,18,43,27,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 7,371,79,19,59,29,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 8,420,92,22,82,34,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 9,461,99,22,97,36,0,0
+/Users/helena/metadata_exp/exp1groupAsub7,Task 10,700,145,95,66,52,0,14
+/Users/helena/metadata_exp/exp1groupAsub8,Task1,158,35,9,26,22,1,0
+/Users/helena/metadata_exp/exp1groupAsub8,Task2,278,64,15,42,35,2,0
+/Users/helena/metadata_exp/exp1groupAsub8,Task3,433,105,21,68,52,2,0
+/Users/helena/metadata_exp/exp1groupAsub8,Task4,598,155,27,103,71,0,0
+/Users/helena/metadata_exp/exp1groupAsub8,Task5,762,197,34,141,89,0,0
+/Users/helena/metadata_exp/exp1groupAsub8,Task6,949,250,41,186,108,0,0
+/Users/helena/metadata_exp/exp1groupAsub8,Task7,1196,311,50,248,130,0,0
+/Users/helena/metadata_exp/exp1groupAsub8,Task8,1355,350,59,280,147,0,0
+/Users/helena/metadata_exp/exp1groupAsub8,Task9,1499,383,64,298,161,0,0
+/Users/helena/metadata_exp/exp1groupAsub8,Task10,1673,420,71,325,177,0,0
+/Users/helena/metadata_exp/exp1groupAsub9,Task 1,93,20,4,15,12,0,0
+/Users/helena/metadata_exp/exp1groupAsub9,Task 2,198,46,17,24,27,3,6
+/Users/helena/metadata_exp/exp1groupAsub9,Task 3,247,57,24,30,30,3,9
+/Users/helena/metadata_exp/exp1groupAsub9,Task 4,338,74,31,33,33,1,12
+/Users/helena/metadata_exp/exp1groupAsub9,Task 5,412,92,45,34,39,1,18
+/Users/helena/metadata_exp/exp1groupAsub9,Task 6,477,114,59,22,36,1,16
+/Users/helena/metadata_exp/exp1groupAsub9,Task 7,507,119,67,25,39,1,18
+/Users/helena/metadata_exp/exp1groupAsub9,Task 8,580,114,59,19,41,1,18
+/Users/helena/metadata_exp/exp1groupAsub9,Task 9,624,125,59,21,45,1,18
+/Users/helena/metadata_exp/exp1groupAsub9,Task 10,633,131,46,21,47,1,20
+/Users/helena/metadata_exp/exp1groupBsub10,Task 1,118,22,13,17,16,0,6
+/Users/helena/metadata_exp/exp1groupBsub10,Task 2,182,36,19,26,22,2,10
+/Users/helena/metadata_exp/exp1groupBsub10,Task 3,238,50,23,44,26,2,12
+/Users/helena/metadata_exp/exp1groupBsub10,Task 4,338,74,31,68,34,3,17
+/Users/helena/metadata_exp/exp1groupBsub10,Task 5,402,94,33,163,44,3,22
+/Users/helena/metadata_exp/exp1groupBsub10,Task 6,469,113,35,258,54,8,27
+/Users/helena/metadata_exp/exp1groupBsub10,Task 7,547,124,49,279,62,8,33
+/Users/helena/metadata_exp/exp1groupBsub10,Task 8,668,151,60,312,72,0,39
+/Users/helena/metadata_exp/exp1groupBsub10,Task 9,861,182,72,374,80,0,45
+/Users/helena/metadata_exp/exp1groupBsub10,Task 10,919,207,80,421,90,0,51
+/Users/helena/metadata_exp/exp1groupBsub11,Task 1,129,21,13,24,18,0,8
+/Users/helena/metadata_exp/exp1groupBsub11,Task 2,173,38,15,62,25,0,10
+/Users/helena/metadata_exp/exp1groupBsub11,Task 3,184,43,16,81,27,0,11
+/Users/helena/metadata_exp/exp1groupBsub11,Task 4,226,59,17,137,32,0,13
+/Users/helena/metadata_exp/exp1groupBsub11,Task 5,290,79,19,339,43,0,18
+/Users/helena/metadata_exp/exp1groupBsub11,Task 6,354,98,21,642,54,0,23
+/Users/helena/metadata_exp/exp1groupBsub11,Task 7,379,104,23,788,58,0,24
+/Users/helena/metadata_exp/exp1groupBsub11,Task 8,433,118,28,815,64,0,25
+/Users/helena/metadata_exp/exp1groupBsub11,Task 9,495,137,28,944,70,0,25
+/Users/helena/metadata_exp/exp1groupBsub11,Task 10,537,150,29,1220,77,0,28
+/Users/helena/metadata_exp/exp1groupBsub5,Task 1,140,23,13,17,16,2,6
+/Users/helena/metadata_exp/exp1groupBsub5,Task 2,212,41,19,29,23,2,10
+/Users/helena/metadata_exp/exp1groupBsub5,Task 3,304,65,26,55,30,1,13
+/Users/helena/metadata_exp/exp1groupBsub5,Task 4,402,90,33,72,36,1,17
+/Users/helena/metadata_exp/exp1groupBsub5,Task 5,525,112,45,125,50,2,26
+/Users/helena/metadata_exp/exp1groupBsub5,Task 6,681,144,59,197,67,2,35
+/Users/helena/metadata_exp/exp1groupBsub5,Task 7,756,157,64,256,74,0,38
+/Users/helena/metadata_exp/exp1groupBsub5,Task 8,860,185,69,329,81,0,39
+/Users/helena/metadata_exp/exp1groupBsub5,Task 9,959,205,75,394,90,0,44
+/Users/helena/metadata_exp/exp1groupBsub5,Task 10,1031,224,78,394,90,0,45
+/Users/helena/metadata_exp/exp1groupBsub7,Task #1,116,19,13,15,16,1,5
+/Users/helena/metadata_exp/exp1groupBsub7,Task #2,185,34,19,22,23,0,9
+/Users/helena/metadata_exp/exp1groupBsub7,Task #3,202,39,21,29,25,0,10
+/Users/helena/metadata_exp/exp1groupBsub7,Task #4,306,72,29,45,33,0,15
+/Users/helena/metadata_exp/exp1groupBsub7,Task #5,363,89,31,140,43,0,20
+/Users/helena/metadata_exp/exp1groupBsub7,Task #6,425,106,33,235,53,0,25
+/Users/helena/metadata_exp/exp1groupBsub7,Task #7,460,112,37,250,58,0,28
+/Users/helena/metadata_exp/exp1groupBsub7,Task #8,570,137,52,320,74,6,37
+/Users/helena/metadata_exp/exp1groupBsub7,Task #9,670,166,56,320,76,6,39
+/Users/helena/metadata_exp/exp1groupBsub7,Task 10,748,183,64,359,86,6,45
+/Users/helena/metadata_exp/exp1groupBsub9,Task 1,169,32,16,26,22,0,10
+/Users/helena/metadata_exp/exp1groupBsub9,Task 2,269,54,25,65,33,0,16
+/Users/helena/metadata_exp/exp1groupBsub9,Task 3,284,59,27,72,35,0,17
+/Users/helena/metadata_exp/exp1groupBsub9,Task 4,383,88,34,96,43,0,22
+/Users/helena/metadata_exp/exp1groupBsub9,Task 5,457,106,40,192,55,0,29
+/Users/helena/metadata_exp/exp1groupBsub9,Task 6,520,124,44,287,65,0,34
+/Users/helena/metadata_exp/exp1groupBsub9,Task 7,623,146,53,342,76,0,41
+/Users/helena/metadata_exp/exp1groupBsub9,Task 8,757,172,66,401,90,0,49
+/Users/helena/metadata_exp/exp1groupBsub9,Task 9,856,195,72,435,95,0,53
+/Users/helena/metadata_exp/exp1groupBsub9,Task 10,953,216,80,482,105,0,59
