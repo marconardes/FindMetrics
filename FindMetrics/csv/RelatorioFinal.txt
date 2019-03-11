@@ -1,0 +1,601 @@
+
+Carimbo de data/hora
+
+10/16/2017 16:01:56
+
+Nome
+
+Alfredo M. Funada
+
+Grupo do Experimento
+
+Usando API de Reflexão do Java
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Sim. O meu código estava bagunçado e não me lembro mais o que fiz.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Não lembrto direito acho que foram o 3, 8 e 10.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Não lembrto direito acho que foram o 3, 8 e 10.
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+nan
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+nan
+
+Justifique sua resposta anterior
+
+nan
+
+==================================
+
+Carimbo de data/hora
+
+10/16/2017 21:05:08
+
+Nome
+
+Daniel Mário de Lima
+
+Grupo do Experimento
+
+Usando API de Reflexão do Java
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+As classes que representavam a informação das anotações precisaram mudar de lugar e usar estruturas diferentes, e tanto a delegação de chamadas quanto a assinatura dos métodos no AnnotationProcessor tiveram que ser alteradas com a tarefa 8. Mesmo assim, a arquitetura inicial por coincidência usava praticamente o mesmo design posteriormente solicitado.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+As tarefas de adição de funcionalidades foram bem mais simples, por já existir uma arquitetura generalizada para a chamada das funcionalidades, como nas tarefas 9 e 10.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+As tarefas de adição de funcionalidades foram bem mais simples, por já existir uma arquitetura generalizada para a chamada das funcionalidades, como nas tarefas 9 e 10.
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+nan
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+nan
+
+Justifique sua resposta anterior
+
+nan
+
+==================================
+
+Carimbo de data/hora
+
+10/2/2017 15:15:25
+
+Nome
+
+David Buzatto
+
+Grupo do Experimento
+
+Usando Esfinge Metadata
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Não
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Todas, menos a 8
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Todas, menos a 8
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+Mapeamento de informações de anotações para atributos, Validação de uso de anotações, Criação de uma anotação customizada de mapeamento, Criação de uma anotação customizada de validação, Mapeamento de processors
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+Ajudou na coleta dos metadados das classes.
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+Estender o framework (tarefa 8) me pareceu um pouco complicado demais, mas sinceramente não sei como poderia ser feito diferente e de forma mais simples.
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+Concordo fortemente
+
+Justifique sua resposta anterior
+
+Achei que o esfinge ajudou muito na coleta de informações sobre as classes e eu, se precisasse de uma funcionalidade parecida na implementação de um framework, provavelmente levaria em consideração usar o esfinge.
+
+==================================
+
+Carimbo de data/hora
+
+10/17/2017 21:07:18
+
+Nome
+
+Gustavo Furtado de Oliveira Alves
+
+Grupo do Experimento
+
+Usando Esfinge Metadata
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Não, segui a indicação de utilizar o Esfinge Metadata e usei a mesma arquitetura até o final do experimento
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+A maioria das tasks foi relativamente fácil de implementar com o Esfinge Metadata, geralmente elas eram parecidas, mudava apenas o tipo de dado e a forma de ler o parâmetro, as Anotações de restrição de tipo de atributo de outras anotações resolveram problemas que demandaria muito mais linhas de código.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+A maioria das tasks foi relativamente fácil de implementar com o Esfinge Metadata, geralmente elas eram parecidas, mudava apenas o tipo de dado e a forma de ler o parâmetro, as Anotações de restrição de tipo de atributo de outras anotações resolveram problemas que demandaria muito mais linhas de código.
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+Mapeamento de informações de anotações para atributos, Validação de uso de anotações, Criação de uma anotação customizada de mapeamento, Criação de uma anotação customizada de validação, Mapeamento de processors
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+O mapeamento automático dos campos anotados e seus atributos foram de muita valia, além disso, as anotações de validação e de restrições de tipos ajudaram bastante.
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+Eu senti falta de ter mapeado no container de Field, o tipo (.class) do campo, não encontrei isso na documentação, mas também não tive dificuldade de obter essa informação via reflection
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+Concordo fortemente
+
+Justifique sua resposta anterior
+
+Ao criar um framework em Java hoje em dia, é quase inevitável utilizar anotações. Por isso eu concordo que o Esfinge Metadata seria um auxílio muito grande para ler esses metadados. Além disso, a possibilidade de extender o framework com os processors ajuda muito para deixar a utilização do framework mais flexível.
+
+==================================
+
+Carimbo de data/hora
+
+10/20/2017 8:51:23
+
+Nome
+
+Julio Cesar Pinto Santana
+
+Grupo do Experimento
+
+Usando API de Reflexão do Java
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Sim, na task 9. Refatorei o método inserir para que usasse a interface List não genérica, possibilitando armazenar tipos distintos de objetos.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Tasks 1, 2, 3, 4, 5 e 10
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Tasks 1, 2, 3, 4, 5 e 10
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+nan
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+nan
+
+Justifique sua resposta anterior
+
+nan
+
+==================================
+
+Carimbo de data/hora
+
+10/23/2017 11:57:30
+
+Nome
+
+Leonardo de Aguiar Pereira
+
+Grupo do Experimento
+
+Usando Esfinge Metadata
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Ocorreu uma refatoração, mas ela não era tão necessária, foi mais uma melhoria de código. Na parte de processamento da linha de comando, eu criei um algoritmo que processava cada palavra da linha de comando, identificando individualmente o parâmetro (através da presença do hífen) e seus valores. Cada valor era identificado em uma rodada do loop que percorria as palavras da linha de comando. Para parâmetros que possuíssem dois ou mais valores (ex.: -NAME jose alencar) eu precisava concatenar o jose e depois o alencar em duas passadas do loop para que no fim o atributo ficasse como "jose alencar". Fiz isso para as anotações TextValue e NumericValue, mas quando precisei ler a anotação ParameterAnnotation (que seria as anotações customizadas pelo usuário do framework) esse algoritmo não se mostrou útil, pois eu precisava passar para a função do processador da anotação, criada também pelo usuário, já o valor completo. Ou seja, eu não podia passar primeiro "jose" e depois "alencar", eu já precisava passar "jose alencar". Nisso, precisei criar um novo algoritmo, que dessa vez unia toda a linha de comando em uma única string e depois explodia ela pelo hífen, sabendo então que cada parte da explosão seria considerado um parâmetro e seus valores. O parâmetro sempre seria a primeira palavra, e os valores todas as palavras seguintes. Esse algoritmo ocupou menos linhas de código e, acredito eu, menos processamento, por isso substituí, para o processamento das anotações TextValue e NumericValue, o algoritmo antigo por esse novo.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+As tarefas mais simples foram as tarefas: 03, 04, 05, 06 e 10. Foram as que eu consegui identificar rapidamente as necessidades e atuar sem problemas na resolução do problema.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+As tarefas mais simples foram as tarefas: 03, 04, 05, 06 e 10. Foram as que eu consegui identificar rapidamente as necessidades e atuar sem problemas na resolução do problema.
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+Mapeamento de informações de anotações para atributos, Validação de uso de anotações, Criação de uma anotação customizada de mapeamento, Mapeamento de processors
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+A facilidade de definir regras para anotações e ler elas em objetos, criando uma robusta forma de controlar objetos corretamente anotados.
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+Durante o uso e de acordo com as necessidades que tive, não encontrei desvantagens significativas. Mas um ponto que observei que carece de melhor atenção é a documentação, ela poderia estar melhor organizada e categorizada, a forma como está hoje é um pouco confusa.
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+Concordo fortemente
+
+Justifique sua resposta anterior
+
+Principalmente pelo fato de eu já ter criado frameworks para desenvolvimento de aplicações web, percebi a grande vantagem em utilizar anotações para oferecer aos usuários formas de criar recursos a ser processados pelo framework, como por exemplo controladores de rota. Uma anotação @Route(name="customer-edit", url="customer/edit/:id") seria o suficiente para configurar um método a ser executado em uma determinada rota, bem como conseguir utilizar o "name" da rota para referencia-la em outros pontos do sistema para indicar redirecionamentos. Com o auxilio do Esfinge Metadata, a criação, manutenção e processamento dessa anotação seria muito facilitado.
+
+==================================
+
+Carimbo de data/hora
+
+10/3/2017 8:15:11
+
+Nome
+
+Luiz Wagner Tavares Nascimento
+
+Grupo do Experimento
+
+Usando Esfinge Metadata
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Inicialmente por desconhecimento do framework, cada field anotado era buscado pelo nome, posteriormente foi utilizado o recurso que o framework popula uma lista com todos os campos anotados com determinado tipo de anotação (@AllFieldsWith). Outra refatoração realizada foi apenas para dividir responsabilidades em classes específicas relacionadas à configuração das anotações das classes e para as validações de Texto, Número, Data, Compostas e Customizadas.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+O incremento das validações foi bastante facilitado uma vez que já estara construída a extração dos parâmetros de texto e validações básicas de texto/numeros. Assim, as validações de tamanho, casas decimais e principalmente as validações compostas foi apenas necessário reutilizar as validações básicas já existentes.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+O incremento das validações foi bastante facilitado uma vez que já estara construída a extração dos parâmetros de texto e validações básicas de texto/numeros. Assim, as validações de tamanho, casas decimais e principalmente as validações compostas foi apenas necessário reutilizar as validações básicas já existentes.
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+Mapeamento de informações de anotações para atributos, Validação de uso de anotações, Criação de uma anotação customizada de mapeamento, Criação de uma anotação customizada de validação, Mapeamento de processors
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+É bem simples a leitura e mapeamento das classes anotadas, pois os containers são populados "automaticamente" pelo framework. Houve bastante reúso de FieldContainers.
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+A configuração do mapeamento das anotações é um pouco pesada, principalmente na parte de anotações customizadas e processors.
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+Concordo fortemente
+
+Justifique sua resposta anterior
+
+Pelo fato de simplificar bastante a leitura das anotações configuradas nas classes e de proporcionar o reúso no tratamento dos mapeamentos.
+
+==================================
+
+Carimbo de data/hora
+
+10/4/2017 10:03:50
+
+Nome
+
+Marcelo dos Santos
+
+Grupo do Experimento
+
+Usando API de Reflexão do Java
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Sim, no mapeamento dos parâmetros: abstração de funções e posteriormente com os Consumers; abstração do tipo Param, ao invés de mapa de nome por campo; refinamento dos métodos para a recuperação dos atributos das anotações; e com o padrão Chain of Responsibility na estrutura geral. No processamento dos parâmetros com o padrão Chain of Responsibility.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+As tarefas de inclusão de novos tipos de parâmetros são as mais simples, seguido pela validação dos argumentos.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+As tarefas de inclusão de novos tipos de parâmetros são as mais simples, seguido pela validação dos argumentos.
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+nan
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+nan
+
+Justifique sua resposta anterior
+
+nan
+
+==================================
+
+Carimbo de data/hora
+
+10/2/2017 11:56:33
+
+Nome
+
+Matheus Monteiro Mariano
+
+Grupo do Experimento
+
+Usando API de Reflexão do Java
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Sim. Eu precisei refatorar principalmente a forma como eu tratava as condicionais que verificavam se um método possuía uma certa anotação (eu percebi que a forma como eu verificava era redundante). 
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+6, 7 e 10.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+6, 7 e 10.
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+nan
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+nan
+
+Justifique sua resposta anterior
+
+nan
+
+==================================
+
+Carimbo de data/hora
+
+10/16/2017 21:36:38
+
+Nome
+
+Ricardo Terra
+
+Grupo do Experimento
+
+Usando Esfinge Metadata
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Normalmente, nas poucas vezes que eu travava, o Marco me dava um rumo e eu fechava a tarefa. Mas, acredito que na Tarefa #7, eu tenha concluído com sucesso, mas fiz uma refatoração depois de concluir. 
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Acredito que após a dificuldade da Tarefa #1, as demais tarefas até metade da Tarefa #7 fluíram muito bem. Tive dificuldade na Tarefa #8 e depois as demais, eu me confundi um pouco, mas acabei conseguindo fazer.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Acredito que após a dificuldade da Tarefa #1, as demais tarefas até metade da Tarefa #7 fluíram muito bem. Tive dificuldade na Tarefa #8 e depois as demais, eu me confundi um pouco, mas acabei conseguindo fazer.
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+Mapeamento de informações de anotações para atributos, Validação de uso de anotações, Criação de uma anotação customizada de mapeamento, Criação de uma anotação customizada de validação, Mapeamento de processors
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+Ele poupa a escrita de várias linhas de código.
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+A curva de aprendizagem é alta. A documentação é bem aquém do esperado.
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+Concordo fracamente
+
+Justifique sua resposta anterior
+
+Documentação deve ser mais robusta.
+
+==================================
+
+Carimbo de data/hora
+
+10/2/2017 21:26:04
+
+Nome
+
+nan
+
+Grupo do Experimento
+
+Usando Esfinge Metadata
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Houve algumas decisões de design que acabei alterando durante o experimento, porém a mais significativa foi que eu havia criado uma classe para cada tipo de field container, pois eu esperava poder utilizar uma abstração utilizando uma superclasse ou interface. A ideia era ter a lista de fields com o tipo da interface ou superclasse e nos algoritmos eu pudesse utilizar o tipo especifico conforme o field em questão. Porém isso não foi possível, sendo assim eu tive que criar apenas uma classe Field Container que seria usada para todos os tipos de fields.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+A principal tarefa que se tornou muito simples foi de pegar todos os fields com uma determinada anotação utilizando o "@AllFieldsWith". Uma outra anotação do Esfinge bastante útil para validações foi "@ValidFieldTypes".
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+A principal tarefa que se tornou muito simples foi de pegar todos os fields com uma determinada anotação utilizando o "@AllFieldsWith". Uma outra anotação do Esfinge bastante útil para validações foi "@ValidFieldTypes".
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+Mapeamento de informações de anotações para atributos, Validação de uso de anotações, Criação de uma anotação customizada de mapeamento, Criação de uma anotação customizada de validação
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+Algumas tarefas trabalhosas puderam ser feitas mais facilmente com o Esfinge, por exemplo, utilizando as anotações "@ValidFieldTypes" e "@AllFieldsWith".
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+Em certos momentos, senti um problema de desempenho onde o processamento de popular os Containers levaram alguns segundos para serem concluído. Não sei dizer se foi algo causado por outro fator externo, mas acredito que seja um ponto de atenção.
+Outro ponto é que existem certas funções, principalmente as de extensão do Esfinge que achei um tento complicado, que exige um certo tempo de estudo para implementar.
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+Concordo fracamente
+
+Justifique sua resposta anterior
+
+Sem dúvida o Esfinge possui funcionalidades que ajudam muito no desenvolvimento, onde a implementação com Reflexão seria muito trabalhosa. Não marquei "Concordo fortemente" justamente devido a minha resposta na questão anterior.
+
+==================================
+
+Carimbo de data/hora
+
+10/25/2017 20:24:23
+
+Nome
+
+Elder José Reioli Cirilo
+
+Grupo do Experimento
+
+Usando API de Reflexão do Java
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Sim. Primeiramente, o processamento dos parâmetros no comando precisou evoluir de acordo com os novos requisitos que surgiram. Também, No decorrer do desenvolvimento das atividades, inicialmente, da primeira para a segunda tarefa eu desconsiderei o uso da classe ParamMapperContainer, porém, posteriormente, a partir da questão 3 eu percebi a importância da mesma para a condução das demais atividades. Por fim, com para a inclusão da anotação @CompositeParameter, percebi ser necessário extrair os diversos processamentos implementados para um método que passou a ser chamado recursivamente para processar as anotações dentro da classe "composite".
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Tarefas 1, 2, 3, 4, 9 e 10
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+Tarefas 1, 2, 3, 4, 9 e 10
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+nan
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+nan
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+nan
+
+Justifique sua resposta anterior
+
+nan
+
+==================================
+
+Carimbo de data/hora
+
+10/25/2017 22:13:59
+
+Nome
+
+Ana Flavia Batista Lemos
+
+Grupo do Experimento
+
+Usando Esfinge Metadata
+
+Houve alguma decisão tomada nas primeiras tarefas que precisou ser refatorada posteriormente? Em caso positivo descreva quais.
+
+Ao longo do desenvolvimento das atividades eu precisei melhorar o projeto do código para acomodar de modo mais elegante o uso da anotação @CompositeParameter e também a interpretação dos parametros via expressão regular precisou evoluir de uma atividade para outra. Para mim, o uso do framework Esfinge suportou neste sentido a produção de um código mais simples. pois obrigatoriamente a lógica associada ao processamento das anotações não precisou ser implementada, o que possívelmente reduziu possível desvios de projeto iniciais.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+
+Praticamente todas as tarefas, exceto a Tarefa 8, que me tomou um bom tempo estudo. A curva de aprendisado foi bem grande.
+
+Descreva quais tarefas puderam ser realizadas de forma simples durante o experimento.
+
+
+Praticamente todas as tarefas, exceto a Tarefa 8, que me tomou um bom tempo estudo. A curva de aprendisado foi bem grande.
+
+Quais funcionalidades do Esfinge Metadata você utilizou?
+
+Mapeamento de informações de anotações para atributos, Criação de uma anotação customizada de validação, Mapeamento de processors
+
+Descreva os principais benefícios que você enxergou no uso do Esfinge Metadata
+
+Como comentado anteriormente, o framework aliviou a implementação de uma série de exigências para a realização das tarefas, como: validação das regras de uso das anotações não suportadas pela API base do Java, leitura das anotações e informações de contexto como elementos do código onde ela aparece.
+
+Descreva as principais desvantagens que você enxergou no uso do Esfinge MetadataDescreva as principais desvantagens que você enxergou no uso do Esfinge Metadata
+
+Também, como comentando anteriormente, a principal desvantagem observada é a complexidade introduzida pelo framework para suportar a extensão da leitura dos metadados. Imagino que a solução adotada é mais complexa do que uma solução sem o uso do framework. No mais, a solução proposta cumpre bem a propostas reduzir o esforço de leitura das anotações e validação avançada do uso das anotações.
+
+Sobre a frase "Eu utilizaria o Esfinge Metadata na implementação de um framework"
+
+Concordo fortemente
+
+Justifique sua resposta anterior
+
+Eu utilizaria o Esfinge metadada pois o modelo proposto para leitura e validação avançada do uso das anotações é simples, exige uma curva de aprendizado baixa e o melhor reduz um esforço que é repetitivo na implementação de qualquer framework Java moderno.
+
+==================================

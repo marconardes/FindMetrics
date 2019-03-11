@@ -26,7 +26,7 @@ public class RepodrillerMinner implements Study {
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
+		
 		new RepositoryMining()
 		//.in(GitRepository.singleProject("/Users/helena/Documents/Doutorado/EsfingeMetadataExp/Participantes"))
 		.in(GitRepository.allProjectsIn(("/Users/helena/metadata_exp/")))

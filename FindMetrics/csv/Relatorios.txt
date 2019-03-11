@@ -115,6 +115,54 @@ DIFICULDADES
 Não encontrei dificuldade para implementar esta tarefa.
 
 
+TASK 
+5
+IMPLEMENTAÇÃO
+Implementei as regras de validação utilizando as anotações @NeedsToHave, @Notnull, @MinValue e @MaxValue. O processando dos comando foi implementado na classe ParamMapper
+DIFICULDADES
+Não encontrei dificuldades para executar esta tarefa.
+
+
+TASK 
+6
+IMPLEMENTAÇÃO
+Implementei as regras de validação utilizando as anotações @NeedsToHave e @MinValue. O processamento dos valores na linha de comando eu implementei na classe ParamMapper.
+DIFICULDADES
+Não encontrei dificuldade para executar essa tarefa.
+
+
+TASK 
+7
+IMPLEMENTAÇÃO
+Implementei as validações de uso da anotação utilizando a anotação @Prohibits. Para processar as anotações dentro da classe composta, eu extrai os processamentos para um método que passou a ser chamado recursivamente para processar as classes compostas como containers.
+DIFICULDADES
+Não encontrei dificuldade para executar essa tarefa.
+
+
+TASK 
+8
+IMPLEMENTAÇÃO
+Na classe ClassMapperContainer registrei o processamento de todos os campos de acordo com os metadados anotados na classe FieldCustomAnnotationMapperContainer. Nas ultima classe eu coletei a anotação presente no field, o nome do parametro e os dados processados pelo ParameterAnnotationProcessor.  Por fim, na classe ParamMapper implementei a logica de processamento da linha de comando.
+DIFICULDADES
+O uso das anotações para extensão do modelo de metadados é bem pouco trivial. Entrei um pouco de dificuldade para compreender a lógica mesmo assistindo aos videos repetidas vezes.
+
+
+TASK 
+9
+IMPLEMENTAÇÃO
+Para validar o uso da anotação implementei um novo validador chamado GenericTypeValidator associado a classe ValidGenericTypes para verificar o uso correto dos tipos dentro do List genérico. O processamento da linha de comando implementei na classe ParamMapper.
+DIFICULDADES
+Não encontrei dificuldades para implementar esta tarefa em termos de recursos do framework. Porém tive alguns problemas para implementar o processando da linha de comando.
+
+
+TASK 
+10
+IMPLEMENTAÇÃO
+Implementei esta tarefa de modo bem similar a implementação das tarefas 1 e 2, processando os metadados na classe FieldDateValueContainer e ClassMapperContainer e processando a linha de comando na classe ParamMapper.
+DIFICULDADES
+Não encontrei dificuldade para implementar essa tarefa.
+
+
 ============================================
 Daniel Mário de Lima
 Usando API de Reflexão do Java
@@ -282,76 +330,6 @@ nan
 
 
 ============================================
-Denny Paulista Azevedo Filho
-Usando API de Reflexão do Java
-TASK 
-1
-IMPLEMENTAÇÃO
-Depois de analisar os testes solicitados, e com base nos exercícios anteriores, criei a anotação, conforme solicitado, e implementei, inicialmente, a busca pelo nome (parâmetro da anotação). Na sequencia implementei uma busca do nome da anotação, nos parâmetros passados no acionamento do método, um Arrays de Strings, que invocaria um método de atribuição (invocando os métodos setters correspondentes), para as situações previstas na tarefa. Implementei um método que invocava o Setter do Field correspondente ao nome passado, com o valor booleano informado. O último ajuste foi a troca da exceção padrão, pela criada na tarefa e utilizada nos testes. 
-DIFICULDADES
-Minha maior dificuldade ainda é no retorno do uso da Linguagem Java, nos dois últimos dois anos apenas trabalhei com C# e Python. O uso de reflexões e anotações é novo para mim, logo, ainda tenho uma curva de aprendizado a cumprir, isso só causa uma lentidão no processo de solução, mas não uma barreira.
-
-
-TASK 
-2
-IMPLEMENTAÇÃO
-Aproveitei o código da tarefa 1, ajustando par os requisitos da nova tarefa. Foi necessário um ajuste no código da tarefa 1, para manter os dois testes funcionais. Acredito que ainda caiba alguma refatoração, mas de imediato a solução adotada atende as exigências do teste.
-DIFICULDADES
-nan
-
-
-TASK 
-3
-IMPLEMENTAÇÃO
-Aproveitamento do código básico da task2, fazendo busca da anotação, incluindo a busca na classe. 
-DIFICULDADES
-nan
-
-
-TASK 
-4
-IMPLEMENTAÇÃO
-Aproveitei os códigos anteriores das task 2 e 3, para localização das annotations, extração de nomes, métodos, parâmetros e valores. Fiz um ajuste na verificação da annotation Mandatory, para comportar as novas funcionalidades. E montei uma verificação para a nova annotation (Numericvalue) levando em consideração a diversidade de tipos, necessitando conversões, e o modo diferente para o acionamento dos métodos (até aqui o nome indicava o método). Não foi talves a solução mais elegante, mas está funcional....talvez uma melhor aplicação de técnicas mais avançadas de OO permita um reajuste do código.
-DIFICULDADES
-nan
-
-
-TASK 
-5
-IMPLEMENTAÇÃO
-Com base na tarefa anterior, foi efetuado os ajustes para determinar as anotações específicas, modificação do método para a anotação Mandatory.
-DIFICULDADES
-nan
-
-
-TASK 
-6
-IMPLEMENTAÇÃO
-Modificação e adaptação da atividade 5.
-DIFICULDADES
-nan
-
-
-TASK 
-6
-IMPLEMENTAÇÃO
-Modificação e adaptação da atividade 5.
-DIFICULDADES
-nan
-
-
-============================================
-Denny Paulita Azevedo Filho
-Usando API de Reflexão do Java
-TASK 
-7
-IMPLEMENTAÇÃO
-Criei nova Instância de ParamMapper, para receber a classe do elemento composto. E com isso criei uma "recursividade" da classe. Verificando todas as possibilidades de annotations já verificados.
-DIFICULDADES
-Como ocorreu mudanças nas chamadas dos métodos Setters, foi necessário ajustes no  código já testado.
-
-
-============================================
 Elder José Reioli Cirilo
 Usando API de Reflexão do Java
 TASK 
@@ -400,14 +378,6 @@ IMPLEMENTAÇÃO
 Validei as regras na classe ParamMapperContainer e implementei a leitura dos valores da linha de comando na classe ParamMapper como um adento ao comportamento de leitura da anotação @NumericValue
 DIFICULDADES
 Não encontrei dificuldades na execução da tarefa.
-
-
-TASK 
-6
-IMPLEMENTAÇÃO
-Infelizmente, eu esqueci de copiar os casos de teste referentes a tarefa 6 e após uma implementação parcial me enganei com a completude do código e imaginei que minha versão havia passado em todos os testes. Executando então os casos de testes da Tarefa 6 eu percebi que algumas validações referentes ao uso da anotação não estavam completas. Com isso, implementei elas na classe ParamMapperContainer. Refiz o commit do código da tarefa com a label "Terefa #6 - Complemento". O tempo neste formulário se refere a soma do tempo gasto anteriormente, na execução da tarefa, e anotado no formulário submetido anteriormente, mais o tempo gasto para implementar a validações finais.
-DIFICULDADES
-Não encontrei dificuldade para implementar o complemento.
 
 
 TASK 
@@ -558,34 +528,7 @@ Sem dificuldades.
 
 
 ============================================
-Jonathan Camilo de Lima
-Usando Esfinge Metadata
-TASK 
-1
-IMPLEMENTAÇÃO
-Li a tarefa e fiz algumas anotações sobre o que era necessário para concluí-la. Depois de entender o problema eu fui ver como o esfinge metadata poderia me ajudar. Aproveitei a ideia do ClassContainer e FieldContainer das vídeo-aulas e comecei implementar o ParamMapper.
-DIFICULDADES
-Talvez o parser dos args pode ficar um pouco trabalhoso mais pra frente. Se pudesse usar uma API que já faz isso.
-
-
-TASK 
-2
-IMPLEMENTAÇÃO
-Fui rodando os testes e ajustando o ParamMapper até passar todos os testes.
-DIFICULDADES
-Essa já foi um pouco mais trabalhoso pra validar todas as regras.
-
-
-TASK 
-3
-IMPLEMENTAÇÃO
-Verifiquei se a anotação Mandatory estava presente no campo ou na classe. Se sim, e o campo estivesse vazio eu lançava a exceção ParameterReadingException.
-DIFICULDADES
-Só uma pequena dificuldade na hora de entender que eu tinha que verificar se a anotação estava presente na classe ou na variável de classe.
-
-
-============================================
-Julio C. P. Santana
+Julio Cesar P. Santana
 Usando API de Reflexão do Java
 TASK 
 1
@@ -657,7 +600,6 @@ TASK
 9
 IMPLEMENTAÇÃO
 Na leitura da classe através de um loop pelos seus campos, executei o método getGenericType do field, obtive um ParameterizedType e através dele identifiquei se o campo era do tipo List, sendo através do método getActualTypeArguments obtive o tipo associado ao List. De posse do tipo, realizei a validação da anotação sobre o campo lançando uma exceção caso o tipo não seja válido.
-
 Na inclusão dos valores, realizo um loop pelos parametros inputados e recupero os campos anotados com ele. Para cada campo, do tipo list, recupero o tipo e valido para determinar se é preciso fazer cast do valor antes de armazena-lo em um List. Após utilizando a biblioteca BeanUtils, realizo a gravação do list no campo da instancia da classe repassa.
 DIFICULDADES
 Identificação do tipo usado no List generic, não existe um método que facilite essa operação na API.
@@ -672,33 +614,6 @@ Comparo o valor retornado pelo método getDateFormatted com o valor do input e c
 Depois de buscar todos os parametros inputados, verifico se existe algum campo mandatório não preenchido e caso tenha lanço uma exceção.
 DIFICULDADES
 .
-
-
-============================================
-Katia Cristina Lage dos Santos
-Usando API de Reflexão do Java
-TASK 
-1
-IMPLEMENTAÇÃO
-Inicialmente fiz uma análise do framework proposto e fiquei um tempo entendendo como iria fazer a tarefa com base no que foi dado. Quando iniciei a implementação, inicialmente foi criada a anotação IsParameterPresent. Posteriormente foi criado o método responsável pela captura dos metadados da classe enviada como parâmetro na classe com.pmapper.ParamMapper. Por fim foram feitas duas alterações na classe com.pmapper.ParamMapperContainer: a primeira foi a inclusão da chamada ao método que realiza o mapeamento dos metadados na classe com.pmapper.ParamMapper e posteriormente foi realizada a implementação do método que avalia os parâmetros passados e define a chamada ou não dos métodos do tipo set para os campos do tipo boolean ou java.lang.Boolean como verdadeiro. Apesar do valor default dos campos do tipo lógico em Java serem iniciados como falso, coloquei explicitamente a atribuição false para todos os campos lógicos inicialmente já que isso foi descrito explicitamente na tarefa.
-DIFICULDADES
-A principal dificuldade foi com relação ao tratamento diferenciado do tipo de retorno primitivo boolean e o tipo de retorno da classe Boolean. Posteriormente, ainda tive que fazer um reparo no código para tratar o caso de exceção que é levantada quando a anotação é utilizada incorretamente em algum campo de tipo diferente de um valor lógico (último caso de teste)
-
-
-TASK 
-2
-IMPLEMENTAÇÃO
-Acompanhando o raciocínio da tarefa anterior, inicialmente fou criada a anotação TextValue. Em seguida, foi criado o método responsável por coletar os metadados da classe com os parâmetros na classe ParamMapperContainer e que trata em específico de atributos do tipo String. Foi feito o mapeamento dos atributos do tipo String e se há anotações do tipo @TextValue em cada um deles. Posteriormente, foi feita a chamada do referido método na classe ParamMapper. Como o código estava ficando muito extenso, inicialmente foi feita uma modularização do método readParameters, implementado na Tarefa 1, onde foram extraídas todas as instruções anteriormente inseridas para um método readParameterBoolean. A chamada desse método foi incluída no readParameter. Usando a mesma lógica do readParameterBoolean foi criado um método para ler os parâmetros relativos aos atributos anotado como TextValue. O diferencial nesse método foi a criação de uma  rotina específica para lidar com os argumentos recebidos já que nesta tarefa poderia ter um número indefinido de argumentos referentes a valores de um determinado argumento.
-DIFICULDADES
-A principal dificuldade nessa tarefa foi criar um método para lidar com os argumentos passados na linha de comando. Como não havia um número específico de tokens a cada novo teste o método mapearArgumentosValores teve que ser modificado para contemplar outros casos. 
-
-
-TASK 
-3
-IMPLEMENTAÇÃO
-Inicialmente foi criada a anotação @Mandatory. Em seguinda, na classe ParamMapperContainer foi criado o método verifyMandatoryAnnotationInClass que verifica se essa anotação foi realizada no nível da classe. Se isso for identificado, o valor default do atributo de classe defaultMandory é verdadeiro, indicando que todos os atributos do tipo String deverão obrigatoriamente informados como argumento. Em seguida, foi realizada uma alteração no método createMetadataMapTextValue que define os metadados de atributos com a notação @TextValue. Nele foi incluída a verificação da existência da anotação @Mandatory a nível de campo. Dependendo da presença ou não da anotação era definida a obrigatoriedade ou não do argumento na linha de comando. Por fim, na classe ParamMapper foi criado um método que avalia os arugumentos passados e verifica se eles atendem às anotações @TextValue  & @@Mandatory, lançando exceção se isso não for atendido.
-DIFICULDADES
-A única dificuldade foi na implementação do método que avalia a linha de comando. Ele que demandou mais tempo.
 
 
 ============================================
@@ -782,89 +697,6 @@ IMPLEMENTAÇÃO
 Criei a anotação DateValue e seu container DateValueContainer. Configurei um atributo no container ParamMapperContainer para receber uma lista de DateValueContainer a partir de campos anotados com @DateValue. No processamento da linha de comando, percorri por todos os containers do tipo DateValueContainer para processar cada anotação DateValue do objeto passado. Precisei utilizar o método antigo de varredura de linha de comando, pois alguns formatos de data incluíam o hífen, utilizado para fazer separação dos comandos da linha. Com o método antigo, a separação é feita por espaços em branco, o que permite resgatar linhas de comando como -DATE dd-mm-yyyy sem se confundir com os hifens do formato. De posse o valor do parâmetro, bastou tentar criar uma instância de SimpleDateFormat com o formato passado na anotação, caso não conseguisse retornaria um erro. Em caso de sucesso, o campo seria populado no atributo.
 DIFICULDADES
 Nenhuma dificuldade significativa
-
-
-============================================
-Luiz Wagner Tavares Nascimento
-Usando Esfinge Metadata
-TASK 
-1
-IMPLEMENTAÇÃO
-Criei o container para leitura dos parâmetros da classe pelo Esfinge Metadata, container para armazenar o valor das anotações e utilizei API Reflection para setar o valor dos parâmetros encontrados nos argumentos na nova instância da classe de teste.
-DIFICULDADES
-Dificuldade de entender como utilizar o Esfinge Metadata, mesmo seguindo o tutorial na documentação.
-
-
-TASK 
-2
-IMPLEMENTAÇÃO
-Criei a anotação @TextValue, seu respectivo FieldContainer para leitura no ParamContainer pelo EsfigeMetadata e refatorei o método readParameters da classe ParamMapper a fim de extrair o texto dos parâmetros passados nos argumentos. Foi criado também um método privado na classe ParamMapper para validação dos argumentos segundo os requisitos.
-DIFICULDADES
-Dificuldade não houve dessa vez, pois foi necessário apenas repetir a leitura da anotação já criada.
-
-
-TASK 
-3
-IMPLEMENTAÇÃO
-Foi criada a anotação @Mandatory e um método privado na classe ParamMapper para checar os parâmetros obrigatórios. Feita a leitura das anotações utilizando a funcionalidade do Esfinge Metadata AnnotationFinder.findAnnotation e uma lógica de comparação da existência da anotação e a leitura dos parâmetros passados na linha de comando.
-DIFICULDADES
-Não foi difícil incrementar a funcionalidade de parâmetro mandatório, apesar de não ter ficado confuso na documentação qual anotação utilizar, se era a @SearchInsideAnnotations ou @SearchOnEnclosingElements. Após a aplicação no caso de teste, percebi que era a @SearchOnEnclosingElements.
-
-
-TASK 
-4
-IMPLEMENTAÇÃO
-Inicialmente foi criado o container para a anotação numérica e o novo método de leitura dos parâmetros numéricos, conforme as tarefas anteriores. Porém, como o método ficou grande e repetitivo pela quantidade de parâmetros numéricos possíveis, foi feita uma refatoração para retirar a repetição de código e para contornar um comportamento adverso do Esfinge Metadata.
-DIFICULDADES
-A dificuldade foi contornar o fato de que os testes estavam passando isoladamente de cada tarefa, porém quando executados todos em conjunto (ou por meio do mvn test), ocorria erro por conta do container possuir anotações das classes dos testes anteriores. Dessa forma, foi necessário refatorar o código para contornar esse comportamento não esperado, ou pelo menos não conhecido por mim até então.
-
-
-TASK 
-5
-IMPLEMENTAÇÃO
-Foi criados os containers para ParameterLength e ParameterFormat e criados métodos de validação dentro da lógica de leitura de TextValue, caso existam as novas anotações, bem como um método de validação caso uma das novas anotações esteja configurada sem haver @TextValue presente.
-DIFICULDADES
-A lógica implementada aparentemente estava toda correta, porém ao executar os testes do JUnit apareciam erros aleatórios em diferentes métodos de teste. Foi observado comportamento adverso devido à configuração do Container de Anotações, no método AnnotatioReader.readAnnotationsTo. Bastou a atualização para versão 1.5.5 do Esfinge Metadata para que os testes passassem na lógica implementada.
-
-
-TASK 
-6
-IMPLEMENTAÇÃO
-Foram criadas as anotações referentes ao @ParameterRange e @ParameterPrecision, seus respectivos FieldContainers e os métodos de validação, tanto de existência das anotações na configuração da classe, como também as validações funcionais referente ao próprio Range e Precision.
-DIFICULDADES
-nan
-
-
-TASK 
-7
-IMPLEMENTAÇÃO
-Foi criado o container para a nova anotação @Composite e o método para validação e seu processamento. A partir daí foram checadas as condições de configuração da classe (não abstrata e contendo construtor vazio), criada uma nova instancia do ParamMapper e delegada para ela validar todo o seu conteúdo, como se fosse uma classe primária.
-DIFICULDADES
-nan
-
-
-TASK 
-8
-IMPLEMENTAÇÃO
-Foi criada o container de field relacionado à nova anotação customizada - @ParameterAnnotation, esta por sua vez foi relacionada a um Processor do tipo IS_PROCESSOR do framework Metadata. No método Processor.readAnnotation foi adicionada a anotação @ExecuteProcessor, e então no método de validação do mapper os parâmetros são lidos e setados no método Processor.seParameter conforme os requisitos.
-DIFICULDADES
-Houve uma grande dificuldade em compreender na documentação do framework qual Processor deveria ser utilizado, os exemplos não ficaram tão claros para mim sobre quais configurações deveriam ser feitas nas novas anotações e no uso do @CustomReader. Cheguei a colocar todos os CustomReaders e ProcessorPerFields que haviam disponíveis, mesmo assim não estava conseguindo achar a propriedade "name" da anotação customizada com a nova anotação @ParameterAnnotation, não sei se no framework Metadata isso seria possível. A solução foi acabar modificando a interface do Processor adicionando um método getNameInAnnotation() e então as classes concretas passaram a possuir um campo String nameInAnnotation que seria populado no momento da inicialização do processor no método readAnnotation, que era o local onde encontrei a anotação customizada disponível para obter esse parâmetro que seria lido posteriormente durante o método de validação do mapper.
-
-
-TASK 
-9
-IMPLEMENTAÇÃO
-Foram alterados apenas os validadores de @TextValue e @NumericValue, passando a considerar os novos requisitos, ou seja, ao pegar o valor passado no argumento, foi a lista foi separada utilizando arg.split[";"], verificado o tipo genérico da lista conforme a dica do requisito (String, Integer ou Double) e então setado com o método correspondente.
-DIFICULDADES
-nan
-
-
-TASK 
-10
-IMPLEMENTAÇÃO
-Foi necessário apenas criar o container para leitura do parâmetro Date, no método de validação a classe SimpleDateFormat é instanciada com o formato definido na anotação e então foi o método parse, que nos casos inválidos já lança uma ParseException, sendo então transformada para a exceção de domínio ParameterReadingException.
-DIFICULDADES
-nan
 
 
 ============================================
@@ -962,159 +794,6 @@ A refatoração melhorou a API aplicada as tarefas, o que facilitou na inclusão
 
 
 ============================================
-Marco Augusto Ribeiro Nardes
-Usando Esfinge Metadata
-TASK 
-1
-IMPLEMENTAÇÃO
-Foi implementado utilizando as anotações básicas do esfinge metadata.
-DIFICULDADES
-Nenhuma no momento.
-
-
-============================================
-Marilene Esquiavoni
-Usando API de Reflexão do Java
-TASK 
-1
-IMPLEMENTAÇÃO
-Fiz um estudo dos testes a serem aplicados. Elaborei uma lógica para a solução do problema. Iniciei resolvendo como aplicar os valores, conforme solicitado na tarefa. Para isso, programei uma anotação, que possuía um nome como parâmetro, e criei uma função que buscava este nome (com base nos exercícios anteriormente efetuados). Com o nome localizado, procurava no array fornecido como parâmetro. Montei duas opções, nome nos parâmetros, ou não, para atribuir os valores, true ou false, conforme solicitado no exercício. Para isso criei uma nova função (novamente, baseado nos exercícios anteriores), que atribui o valor (treu ou false) ao nome informado, disparando um a exceção, caso isso não fosse possível. Com isso passei 5 dos 6 testes. Para o último teste só foi necessário alterar a exceção disparada.
-DIFICULDADES
-Minha maior dificuldade é a linguagem. Aprendi o Java na faculdade, e mesmo assim, só OOP básica. Consigo entender toda a lógica necessária, mas demoro para ajustar ao Java. Há alguns anos só tenho utilizado C# e mais recentemente Phyton (mas não com OOP). Também é novo para mim a reflexão e anotação.
-
-
-TASK 
-2
-IMPLEMENTAÇÃO
-utilizei como base a tarefa anterior com pequenos ajustes
-DIFICULDADES
-nan
-
-
-TASK 
-3
-IMPLEMENTAÇÃO
-Utilizei a solução para a tarefa 2 como base. Ajustei o código para procurar a anotação Mandatory, para a classe, e para o campo. Aproveitei parte do código da tarefa 2, visto o Mandatory estar atrelado ao TextValue. 
-DIFICULDADES
-nan
-
-
-TASK 
-4
-IMPLEMENTAÇÃO
-Ajustes no código anteriormente utilizado (Task 3) com uma verificação dos tipos de dados (nome do parametro informado), pra conversão e acionamento do método correto.
-DIFICULDADES
-nan
-
-
-TASK 
-5
-IMPLEMENTAÇÃO
-Modificações da atividade 4, com ajustes para comportar as novas solicitações de anotações, principalmente no método de verificação da anotação Mandatory.
-DIFICULDADES
-nan
-
-
-TASK 
-6
-IMPLEMENTAÇÃO
-Modificação e adaptação da atividade 5
-DIFICULDADES
-nan
-
-
-TASK 
-7
-IMPLEMENTAÇÃO
-Criação de objeto da classe ParamMapper para receber o field do tipo (Classe) Composite, permitindo o verificação de seus elementos.
-DIFICULDADES
-Mudanças nos métodos Setters, nome e tipos, fizeram que fosse necessário reescrever códigos já testados
-
-
-============================================
-Matheus Monteiro Mariano
-Usando API de Reflexão do Java
-TASK 
-1
-IMPLEMENTAÇÃO
-Editei o método public <E> E map(String[] args, Class<E> paramClass) da classe ParamMapper, adicionando duas comparações principais: 1) se a anotação @IsParameterPresent está presente no método; e se estiver, 2) se o tipo do campo é boleano (boolean ou Boolean). Caso seja verdade nas duas condicionais, insere o valor 'false' no método atual através da BeanUtils.setProperty() e verifica se o valor do atributo da anotação corresponde ao valor passado pelo String args[]. Caso seja, é utilizado novamente o BeanUtils.setProperty() para marcar como 'true' o atributo do campo analisado.
-DIFICULDADES
-A principal dificuldade que encontrei foi em associar a BeanUtils na inserção do valor na classe que fazia o mapeamento. Demorei boa parte do tempo mais para entender como era esse relacionamento entre as classes e saber que a BeanUtils faria a inserção na ParamClassTask1. Depois de entender isto, consegui fluir no exercício.
-
-
-TASK 
-2
-IMPLEMENTAÇÃO
-Basicamente estendi o conteúdo da Task 1, inserindo a verificação da TextValue dentro da isParameterPresent. Tomei esta decisão por inicialmente acreditar que poderia reaproveitar algum laço de repetição ou verificação - e que as duas anotações não fossem independentes uma da outra. Em questão de processo, as duas fazem uma análise parecida. A principal diferença está em pegar o TextValue e inserir nas funções mapeadas. Para pegar o conteúdo do TextValue, foi feito uma verificação interna da string em que: se um conjunto de caracteres estiver entre dois caracters com um - antes (e ele não tiver um -) ou estiver entre um - até o tamanho total da String então é considerado TextValue. Neste caso foi criado uma função String arg(String[] args, int i) para fazer este processo.
-DIFICULDADES
-A maior dificuldade foi saber como encaixar as funções. Devido a decisão de reaproveitar o laço, acabou que tive que gerar mais verificações dos campos declarados. Dependendo de como será a Task 3, esta decisão será revista.
-
-
-TASK 
-3
-IMPLEMENTAÇÃO
-A principal novidade nesta Task foi na criação de métodos que faziam as checagens necessárias para saber se um método ou classe tinha a anotação @Mandatory. Essas condicionais (basicamente uma por teste mais ou menos) estão inseridas antes e depois do "código base" das Tasks anteriores. A verificação da @Mandatory compõem o código da condicional em que o método tinha a anotação @TextValue. Algumas condicionais foram separadas para suportar a exceção ParameterReadingException.
-DIFICULDADES
-A decisão anterior de aproveitar o laço (como comentado no questionário da Task 2) se mostrou falho, pois nesta Task a anotação @TextValue era independente da @isParamenterPresent, o que se mostrou necessário remodelar o código e separar em duas condicionais: se o método continha a @isParamenterPresent ou a @TextValue. Se tinha a @TextValue, verificava se tinha uma @Mandatory. Outra dificuldade foi encontrar uma forma mais eficiente de verificar se nos argumentos continham todos os métodos @Mandatory. Não sei se foi eficiente, porém foi tomado a decisão de fazer esta verificação por último.
-
-
-TASK 
-4
-IMPLEMENTAÇÃO
-A princípio do mesmo modo que a Tarefa 3. De fato, o corpo de comparações e laços chaves do código para a @NumericValue foi a mesma para a @TextValue. A principal diferença foi na inserção de condicionais para verificar o tipo do argumento, e realizar a conversão entre String para o tipo específico. Também foi inserido uma nova verificação para os argumentos (checkStringArg), que verifica se ele começa com um - ou não. Outra mudança foi no método checkMandatoryMissing, onde foi desconsiderado a necessidade de verificação da anotação e deixado mais genérico para ser usado também para @NumericValue.
-DIFICULDADES
-Nesta tarefa, a maior dificuldade foi descobrir porque um argumento null estava passando pela condicional if (numericField.getAnnotation(NumericValue.class).toString().contains("name="+args[i].substring(1))) e dava positivo em todos os testes referentes ao throw Exception, mas 2 que davam erro/ficava vermelho eram sobre comparações com assertEquals. Percebi depois que aceitava porque o args[i].substring(1) era null, desta forma entrava em todas as anotações. Então, quando dava algum problema, entrava em um throw e parecia que tinha funcionado. Depois inseri um !args[i].substring(1).isEmpty e funcionou.
-
-
-TASK 
-5
-IMPLEMENTAÇÃO
-No geral, as principais mudanças foram no 'else' da anotação @TextValue para inserir a verificação da @ParameterLegth. Se possuir a anotação, verifica se a string está entre os parâmetros min() e max() - se não estiver, dá uma exceção. Também foi criado um método checkFormatWithNumbers() que verifica o formato da string pela anotação @ParameterFormat. Foi optado por criar um método porque ele será utilizado quando houver apenas a anotação @ParameterFormat, e também quando estiver atrelada com @TextValue. A checkFormatWithNumbers() recebe como parâmetro o vetor de String de argumentos (args), o campo (Field), a paramInstance e a posição no vetor do argumento (um inteiro). No método, verifica o regex da string e se estiver dentro do formato, insere através da BeansUtils. Se não, dá uma exceção. 
-DIFICULDADES
-Não foi encontrado nenhuma dificuldade relevante pra discussão neste momento (além que eu esqueci do RUNTIME...). Porém, tive que alterar de alguns métodos, como da condicional else if(field.isAnnotationPresent(TextValue.class)) porque percebi que havia redundância nas verificações.
-
-
-TASK 
-6
-IMPLEMENTAÇÃO
-Acrescentei condicionais dentro do escopo do código da anotação @NumericValue, se o valor do argumento era maior que o atributo max da @ParameterRange, ou menor que o min, ou o min maior que o max e se o min e max foram incluídos (neste caso, comparei se o min e o max eram iguais aos valores default Double.MIN_VALUE/MAX_VALUE). Também foi incluído uma condicional antes de aplicar o método BeanUtils.setProperty: para valores Short, Int e Long, se a anotação @ParameterPrecision está incluída joga uma exceção; já para Double e Float, verifica se a anotação @ParameterPrecision está incluída, se sim  verifica se o valor incluído para as casas decimais são negativos (se for, joga uma excessão), e verifica se o tamanho da casa decimal condiz com o que foi incluído como parâmetro da anotação @ParameterPrecision (realiza um solitário do argumento através do ponto flutuante e pega a segunda casa, e então verifica o tamanho da string pela função length).   
-DIFICULDADES
-A única "dificuldade" encontrada foi arrumar o erro da classe ParamClassTask6WithoutMinAndMax onde precisava definir os atributos da anotação @ParameterRange como default. Isto estava na explicação do exercício, eu que apenas não sabia definir.
-
-
-TASK 
-7
-IMPLEMENTAÇÃO
-Para o teste validValues, criei uma nova condicional específica para tratar a @CompositeParameter, que chama novamente o método map() passando como argumento o array args e o tipo do campo (neste caso, a ParamClassTask7WithAbstractComposite), e retorna para a variável gener do tipo genérico E. Com essa variável, uso a BeanUtils.setProperty para inserir o objeto deste Composite no atributo respectivo da classe. Todos os outros testes não precisaram de modificações no código (5 dos 6 testes passaram automaticamente).
-DIFICULDADES
-Tive que fazer uma modificação menor na verificação da anotação @TextValue, tendo que checar se o argumento tinha como valor inicial um traço ( - ). Precisei disto pois havia casos em que, como eu pego a substring(1) (ou seja, o valor depois do traço di argumento), se o argumento tivesse somente um caracter ele iria passar como uma string vazia, e como eu pego o campo que possui a anotação mapeada através da função contains havia casos em que retornava vazio e o programa pegava o primeiro campo da classe para mapear.
-
-
-TASK 
-8
-IMPLEMENTAÇÃO
-Criei um else final, o que significa que se nenhuma anotação prevista estiver sido encontrada, então espera-se que seja uma nova criada pelo usuário. Nisto, foi realizado um foreach para as anotações do determinado campo e um for para os argumentos. Nisto, é criado um objeto genérico Object que recebe uma nova instância da classe determinada na anotação @ParameterAnnotation. Então, cria uma variável readAnnotation do tipo Method, que vai receber este método, e será realizado um invoke() para inserir o valor. Caso a anotação contenha um ("name=") com o valor especificado no argumento (name=OTHER, MOK, por exemplo) será realizado o mesmo processo com a setParameter.
-DIFICULDADES
-Não há nada a comentar nesta tarefa.
-
-
-TASK 
-9
-IMPLEMENTAÇÃO
-Nas condicionais de se é a anotação @TextValue e @NumericValue coloquei uma condicional para verificar se o campo também é do tipo List.class e se o parâmetro genérico era do tipo esperado (@TextValue era String, e @NumericValue algum valor numérico). Caso o tipo do campo seja uma lista, chama a função arg() que recebe a String de argumentos, a posição no vetor e o parâmetro genérico, que representa o tipo do objeto. Agora, a função arg() cria uma lista genérica de objetos que verifica: se for uma String, simplesmente adiciona em uma lista; caso seja diferente, deduze que seja do tipo Number.class e então, através de reflexão, procura a função valueOf do tipo do objeto passado como parâmetro e faz o invoke. Depois, apenas realiza o BeanUtils para fazer o setProperty. Nota-se que a variável que recebe o retorno da função arg() é do tipo Object genérico, desta forma caso seja uma String uma List<String>, por exemplo, irá aceitar dependendo do tipo do campo mapeado.
-DIFICULDADES
-A maior dificuldade foi encontrar uma maneira de realizar a conversão de String para um tipo numérico de uma forma que aceitasse com que o objeto fosse genérico. Após muitos testes, percebi que se eu realizasse o getMethod() e depois o invoke() do tipo especificado no genericParameter seria uma maneira de deixar a função arg() mais genérica.
-
-
-TASK 
-10
-IMPLEMENTAÇÃO
-Criei uma condicional para caso a anotação @DataValeu estiver presente. Se sim, verifico se o tipo do campo é Date. Caso seja, é pego o valor passado pelo argumento da String. Depois, cria um objeto do tipo Date, que recebe um SimpleDateFormat passado como parâmetro o argumento da anotação @DateValue, e realiza um parse do argumento. Caso dê algum problema de formato, é jogado a exceção throw new ParameterReadingException("Exception: unparseable date format"); se não, é realizado o BeanUtils.setProperty().
-DIFICULDADES
-A única dificuldade foi encontrar um meio de especificar o formato para o objeto Date, mas assim que foi encontrado o SimpleDateFormat e seu método parse() a tarefa se tornou simples.
-
-
-============================================
 Ricardo Terra
 Usando Esfinge Metadata
 TASK 
@@ -1195,189 +874,5 @@ IMPLEMENTAÇÃO
 Essa foi tranquila. Criei um Container para DateValue. Criei um método do ParamMapperContainer que retorna todos os campos com essa anotação. Fiz os tratamentos em ParamMapper e pronto. Tudo funcionando. Inclusive executei todos os 10 testes de unidades e todos com sucesso.
 DIFICULDADES
 nan
-
-
-============================================
-Rodrigo de Souza
-Usando Esfinge Metadata
-TASK 
-1
-IMPLEMENTAÇÃO
-Primeiramente usei o Container do Esfinge para armazenar os Fields anotados. Depois usei Reflection para acessar os métodos com o auxilio das informações do Container.
-DIFICULDADES
-A primeira dificuldade foi a impossibilidade de rodar os testes isoladamente (apenas um por vez). Eu fui obrigado a sempre rodar todos os testes sendo que eu queria na verdade rodar apenas um teste especifico. Na minha pesquisa por uma solução encontrei várias pessoas relatando que seria devido a versão do JUnit, porém mesmo alterando para a versão mais recente não consegui resolver.
-Outro problema que eu não descobri como solucionar foi que por algum motivo o Esfinge está duplicando a "List<FieldContainer>". Ele está adicionando dois fields referente a annotation "@IsParameterPresent(name="A")", sendo que a classe "ParamClassTask1" possui apenas um field com essa annotation. Com a classe "InvalidParamClassTask1" isso não ocorre (pode ser por ela possuir apenas uma annotation).
-Outra dificuldade foi que meus testes falhavam pois eu não havia percebido que os testes deveriam rodar com "boolean" e "Boolean". 
-Creio que uma das dificuldades foi também a falta de experiência prática com o Esfinge.
-
-
-TASK 
-2
-IMPLEMENTAÇÃO
-Novamente utilizei o @AllFieldsWith para capturar todos os fields com a annotation TextValue. Em seguida utilizei a mesma solução da task 1 para setar os valores da classe. Desta vez incluir loops e avaliações de condições para atender todas as restrições.
-DIFICULDADES
-Investi um bom tempo um certo tempo tentando usar o Esfinge para utilizar um FieldContainer sendo uma abstração, um Interface. Não consegui fazer funcionar e devido ao tempo, acabei criando duas classe basicamente iguais.
-
-
-TASK 
-3
-IMPLEMENTAÇÃO
-Utilizei @ContainsAnnotation para saber quais parâmetros eram mandatórios. Por fim utilizei o mesmo código da task 2 para incluir as exceções requeridas.
-DIFICULDADES
-Foi necessário pausar o experimento por 30 minutos, pois o @ContainsAnnotation não estava funcionando e o mesmo causava uma exceção no Esfinge. Durante a pausa analisei com mais calma e descobri que o problema estava na convenção de nome.
-Minha variável era "boolean isMandatory".
-O Eclipse gerou os getters e setters da seguinte forma:
-public boolean isParameterMandatory()
-public void setParameterMandatory(boolean isParameterMandatory)
-
-O Esfinge tentava invocar o método da seguinte forma, por exemplo:
-PropertyUtils.setProperty(container, "isParameterMandatory", false);
-
-Resumindo, quando existe uma variável boolean cujo o nome contém o prefixo "is", ao se gerar os getters e setters o Eclipse desconsidera o "is". Porém o Esfinge considera o "is", tentando invocar "setIsParameter(false)".
-
-
-TASK 
-4
-IMPLEMENTAÇÃO
-Utilizei a annotation @AllFieldsWith para obter todos os fields com a annotation @NumericValue. Em seguida eu reaproveitei o método da task 3 para construir a classe de retorno respeitando as restrições. Fiz algumas melhorias no código uma vez que os métodos estão ficando genéricos, ou seja, códigos muito semelhantes estão sendo utilizados em cada task. Sendo assim, criei uma classe chamada Utils que se encarrega de pegar os Métodos e Invoca-los se responsabilizando em descobrir qual o type correto dos parâmetros. Tentei deixar genérico os método principais que lidam com os valores dos Field Containers (getFieldValue, getNumericValue e setIsParameterPresent) mas não tive sucesso.
-DIFICULDADES
-Notei que os códigos das tasks passadas são bastante similares, sendo assim fiz modificações para utilizar em todos os testes os mesmos métodos, criando a classe Utils. Tentei fazer os mesmo com os métodos getFieldValue, getNumericValue e setIsParameterPresent, porém não obtive sucesso, pois ao se utilizar Interface para os fieldContainers o código não funciona, mais especificamente a annotation @AllFieldsWith deixa de funcionar. O que consumiu mais tempo foi a dificuldade em escolher um design adequado ao se lidar com vários tipos de classes dinamicamente, mesmo assim acho que eu poderia ter encontrado uma forma mais elegante se eu investisse mais tempo em minha pesquisa.
-
-
-TASK 
-5
-IMPLEMENTAÇÃO
-A implementação foi feita utilizando as propriedades das annotations do Esfinge, por exemplo, "ParameterLength" e "ParameterFormat". Os valores de suas propriedades foram utilizados em um métodos criado especialmente para realizar validações, e seguindo a mesma estrutura de loops e condicionais.
-DIFICULDADES
-Realizei uma refatoração, pois eu usava containers de fields diferentes para o "TextValue" e "NumericValue", ambos implementando a mesma interface, porém não é possível utilizar interfaces para tal. Então fiz a fusão dos atributos de ambas as classes em uma apenas, desta forma passei a utilizar o mesmo objeto no algoritmo principal. Realizei mudanças também a forma de validar valores de tasks anteriores, utilizando desta vez annotations do Esfinge, por exemplo, @ValidFieldTypes. Tive dificuldade na execução dos testes, onde eles eram bem sucedidos vezes sim vezes não. Fiz contato via e-mail e foi resolvido. Agora todo o código está funcionando perfeitamente. Acredito que de agora em diante irá acelerar a conclusão das futuras tasks.
-
-
-TASK 
-6
-IMPLEMENTAÇÃO
-Utilizei as validações com annotations do Esfinge @NeedsToHave, @ValidFieldTypes e @MinValue que exige nenhum esforço de implementação de tais regras. No meu método inclui um condicional (if) para checar se é um valor numérico e assim implementar as validações conforme especificado.
-DIFICULDADES
-Após a atualização da versão do Esfinge o desenvolvimento se tornou realmente rápido, devido também a familiarização com o framework. Nesta Task não tive nenhum problema.
-
-
-TASK 
-7
-IMPLEMENTAÇÃO
-Foi implementado um novo método chamado "getCompositeValue" na classe "ParamMapper". Este método é responsável por acessar os métodos get e set do field composite, realizando as validações. Se validado, o método faz uma chamada recursiva na própria classe "ParamMapper", desta vez passando a classe do composite e o resultado é utilizado no método set.
-DIFICULDADES
-Não tive nenhuma dificuldade especifica. Fiquei um pouco confuso sobre o que deveria ser feito e qual seria o melhor design a ser implementado. Porém no final da atividade acabou sendo uma implementação mais simples do que eu estava imaginando.
-Experimente fazer uso da annotation "@ToValidate()", porém não funcionou e acabei mudando de estratégia. Porém na utilização do "@ToValidate()" notei que a documentação esta desatualizada. Ela apresenta o uso como "@ToValidate(value = Validator.class)", porém o uso na versão atual do Framework é "@ToValidate(Validator.class)".
-Acabei fazendo uma busca na documentação a procura de annotations que pudessem ser uteis. Uma observação que gostaria de fazer é sobre a explicação do uso da annotation "@VolatileFieldOnly" que achei um pouco confusa e sem um exemplo que ajudasse no entendimento.
-
-
-TASK 
-8
-IMPLEMENTAÇÃO
-Foi implementado um novo método para processar as annotation customizadas. Foi implementado um único método para todos os casos de testes utilizando reflection. Foi utilizada a annotation @SearchInsideAnnotations na definição da annotation @ParameterAnnotation afim de usa-la como ponto de partida para as lógicas desenvolvidas.
-DIFICULDADES
-Durante boa parte do inicio da Task tive dificuldade de entender e definir um design para a implementação. Fiz uma pausa para estudar melhor o problema e pensar em um design. Além disso, tive dificuldade com os métodos de reflexão, já que o meu método (setCustomAnnotation) estava sendo desenvolvido de forma a ser independente das Annotation customizadas (dentro do package de teste). Também foi necessário fazer uma interrupção, já que a Task levou muito mais tempo do que o esperado.
-
-
-TASK 
-9
-IMPLEMENTAÇÃO
-A principio foi realizada algumas melhorias no código existente.
-Foi adicionado List como um tipo válido para as annotation. Foi implementado um método para captura do tipo do parâmetro do generics, que por sua vez é utilizado no código de invocação do método setter.
-O método "invokeMethod" da classe Utils foi modificado para tratar os métodos com tipo de argumento List.
-DIFICULDADES
-Logo no inicio da tarefa fiz uma pausa pois identifiquei algumas melhorias para aplicar no código.
-Levei um certo tempo para encontrar as técnicas de implementação de ações que meu algoritmo exigia, por exemplo, converter String para um tipo de numérico não conhecido.
-
-
-TASK 
-10
-IMPLEMENTAÇÃO
-Foi incluído um novo filed no container com a annotation @AllFieldsWith(DateValue.class), este field recupera os valores do nome e formato definidos na annotation.
-O código principal na classe ParamMapper foi modificado para tratar os field com a annotation DateValue. Por fim, o código responsável por fazer a invocação do método setter foi modificado para lidar com o tipo Date. Deste modo, as validações foram feitas ao se fazer os tratamentos de exceções.
-DIFICULDADES
-Não tive nenhuma dificuldade, fiz apenas consultas padrões sobre as APIs e sintaxes.
-
-
-============================================
-Wendel Silvério
-Usando Esfinge Metadata
-TASK 
-1
-IMPLEMENTAÇÃO
-Verifiquei a documentação sobre o Esfinge Metadata no site (http://esfinge.sourceforge.net/Metadata.html). Tentei implementar o primeiro exemplo do Metadata Reader porém descobri que era aplicado somente a classe e não aos atributos. Consegui resolver o problema quando utilizei o @ProcessFields da mesma maneira apresentada na seção de Anotações avançadas. Após a criação correta do @ContainerFor, foi necessário atribuir os valores por reflexão e todos os testes passaram.
-DIFICULDADES
-Demorei a maior parte do tempo para entender o contexto do @ContainerFor, mas depois que descobri resolvi os testes rapidamente.
-
-
-TASK 
-2
-IMPLEMENTAÇÃO
-Criei dois atributos para a nova annotation (TextValue), substituí a lista de parâmetros por um map com o parâmetro e o valor passado e criei um tratamento separado para a annotation criada.
-DIFICULDADES
-Tentei criar um FieldContainer genérico para mais de uma annotation porém não consegui que interpretasse mais de uma annotation, então para solucionar este problema, criei atributos novos para a nova annotation.
-
-
-TASK 
-3
-IMPLEMENTAÇÃO
-Adicionei a validação de mandatory para atributo e classe no local onde o valor é preenchido no objeto
-DIFICULDADES
-Nenhuma dificuldade encontrada
-
-
-TASK 
-4
-IMPLEMENTAÇÃO
-Criei os atributos na classe FieldContainer para a anotação @NumericValue e criei um bloco de código para tratamento dos atributos anotados com @NumericValue na classe ParamMapper.
-DIFICULDADES
-Nenhuma dificuldade em relação ao uso da API
-
-
-TASK 
-5
-IMPLEMENTAÇÃO
-Implementei um requisito por vez e a cada conclusão eu executava os testes unitários.
-DIFICULDADES
-Tive dificuldade ao realizar os testes unitários que estavam variando a cada execução mesmo sem alterar o código. Enviei e-mail para o Marco e ele informou a nova versão do Esfinge Metadata com o problema corrigido. Após o ajuste da versão realizei a conclusão dos testes rapidamente.
-
-
-TASK 
-6
-IMPLEMENTAÇÃO
-Adicionei as informações das novas anotações na classe 'FieldContainer' e criei as condições no método 'readParameters' da  classe 'ParamMapper' de acordo com as regras descritas no experimento.
-DIFICULDADES
-Nenhuma dificuldade encontrada.
-
-
-TASK 
-7
-IMPLEMENTAÇÃO
-Adicionei a verificação se a anotação @CompositeParameter existe na classe FieldContainer, adicionei as condições no método readParameters da classe ParamMapper conforme especificado na task e realizei a verificação recursiva dos atributos compostos.
-DIFICULDADES
-Nenhuma dificuldade
-
-
-TASK 
-8
-IMPLEMENTAÇÃO
-Apliquei o @CustomReader para obter os processors para utilização na classe ParamMapper.
-DIFICULDADES
-A dificuldade que tive foi entender o funcionamento do Processor, para entender realizei várias implementações dos exemplos do site e da task.
-
-
-TASK 
-9
-IMPLEMENTAÇÃO
-Eu precisava colocar o código que trata de um unico valor dentro de um loop para ser executado para cada valor da lista.
-DIFICULDADES
-A maior dificuldade foi manter as validações de outras anotações que eram validadas por valor.
-
-
-TASK 
-10
-IMPLEMENTAÇÃO
-Inclui atributos da anotação @DateValue e dos seus parâmetros na classe ParamMapper
-DIFICULDADES
-Nenhuma dificuldade
 
 

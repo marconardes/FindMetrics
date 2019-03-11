@@ -30,7 +30,10 @@ def getFieldList(listCsv, list, hashMap, tamanho, n):
             obj = list()
     #print(hashMap)
 
-def plotLineGraf(hashMap,labelx,labely):
+def plotLineGraf(hashMap,labelx,labely,name):
+    
+    i=0
+    n=0
     for key, value in hashMap.items():
         x = key.split('/')
         if groupName in key:
@@ -80,6 +83,8 @@ def generateIncrement(hashMap):
 
 def plotBarGraf(hash,figname,a, b,c):
     pdd = pd.DataFrame(columns=[a, b,c])
+    print pdd
+   
     for key, value in hash.items():
         for x in range(0, len(value)):
             y = x + 1
@@ -105,11 +110,63 @@ def xdivy(hash1,hash2):
             n.append(z)
         f.setdefault(key,n)        
     return f
+
+def freatureBoxGraf(Dados,savef,c):
+    dados = pd.DataFrame(columns=["Group", "Type", c])
+    for key, value in Dados.items():
+        for x in range(0, len(value)):
+            if (x == 0):
+                nome = "Start framework structure"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, dados)
+            elif ((x == 1) or (x == 3) or (x == 9)):
+                nome = "New mapping annotation"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, dados)
+            elif ((x == 2) or (x == 4) or (x == 5)):
+                nome = "Data validation"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, dados)
+            elif ((x == 6) or (x == 8)):
+                nome = "Feature enhancement"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, dados)
+            elif (x == 7):
+                nome = "Extension point"
+                valor = value[x]
+                adicionaNoCerto(key, nome, valor, dados)
+        
+        sns.set_style("whitegrid")
+        flatui = ["#99bbff", "#ff8080"]
+        sns.set_palette(flatui)
+        plt.figure(figsize=(14, 12))
+        print c
+        ax = sns.boxplot(x=c, y="Type", hue="Group", data=dados)
+        ax.get_figure().savefig(savef)
+        ax.get_figure().clf()
+
+
+def adicionaNoCerto(key,nome,valor,dataFrame):
     
+    if "Nardes" in key:
+         dataFrame.loc[len(dataFrame)] = ['With Metadata', nome,valor]
+    elif "Guerra" in key:
+         dataFrame.loc[len(dataFrame)] = ['Without Metadata', nome, valor]
+    elif "exp1groupA" in key:
+         dataFrame.loc[len(dataFrame)] = ['Without Metadata', nome, valor]
+    elif "exp1groupB" in key:
+         dataFrame.loc[len(dataFrame)] = ['With Metadata', nome, valor]
+
+    return dataFrame
+
+
+
+  
 
 listCsv = list()
 
 loc={}
+plt.figure(figsize=(14, 12))
 
 ReadCsv(listCsv)
 tamanho = len(listCsv)
@@ -117,6 +174,7 @@ getFieldList(listCsv, list, loc, tamanho, 2)
 plotLineGraf(loc,"Commits","Loc")
 plotBarGraf(loc,"loc","TIPO","TASK","LOC")
 
+plt.close("all")
 wmc={}
 getFieldList(listCsv, list, wmc, tamanho, 3)
 plotLineGraf(wmc,"Commits","WMC")
@@ -152,9 +210,10 @@ getFieldList(listCsv, list, cboNorm, tamanho, 9)
 plotLineGraf(cboNorm,"Commits","CBO-NORM")
 plotBarGraf(cboNorm,"cboNorm","TIPO","TASK","CBO-NORM")
 
-incremento = generateIncrement(loc)
 
-plotBarGraf(incremento,"incremento.png","TIPO","TASK","INCREMENTO")
+plotBarGraf(wmcxnom,"Incremento/wmcxnom.png","TIPO","TASK","wmcxnom")
+plotLineGraf(wmcxnom,"Commits","wmcxnom","wmcxnom.png")
+plt.close('all')
 
 wmcxnom = xdivy(wmc,nom)
 plotBarGraf(wmcxnom,"wmcxnom.png","TIPO","TASK","wmcxnom")
